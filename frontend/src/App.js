@@ -7,7 +7,7 @@ import {
     Redirect
 } from "react-router-dom";
 
-import Sidebar from "./Components/Sidebar/Sidebar";
+import Sidebar from "./Components/Sidebar";
 
 function App() {
     return (
