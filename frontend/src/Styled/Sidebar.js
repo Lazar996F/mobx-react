@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import LogoImage from '../Images/MainLogo.PNG'
 
 // Main wrapper for sidebar component
 export const Wrapper = styled.section`
@@ -10,7 +9,7 @@ export const Wrapper = styled.section`
 `;
 
 export const MainLogo = styled.div`
-  background-image: url(${LogoImage});
+  background-image: url(${process.env.PUBLIC_URL + '/images/MainLogo.PNG'});
   background-repeat: no-repeat;
   padding-left: 70px;
   padding-right: 70px;

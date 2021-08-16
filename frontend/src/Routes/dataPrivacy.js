@@ -1,4 +1,4 @@
-import DataPrivacy from "../Components/DataPrivacy";
+import DataPrivacy from "../Pages/DataPrivacy";
 export const DATA_PRIVACY_ROUTE = {
     path: '/privacy',
     exact: true,
