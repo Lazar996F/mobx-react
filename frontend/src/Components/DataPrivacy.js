@@ -1,10 +1,10 @@
-
+import {Box} from '../Styled/DataPrivacy'
 function DataPrivacy() {
     return (
-        <div className="App">
+        <Box>
             <h1>Data Privacy</h1>
-        </div>
-    );
+        </Box>
+    )
 }
 
 export default DataPrivacy;
