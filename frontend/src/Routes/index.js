@@ -1,8 +1,17 @@
-import DATA_PRIVACY_ROUTE from "./dataPrivacy";
-import DASHBOARD from "./dashboard";
+import DataPrivacy from '../Pages/DataPrivacy';
+import Dashboard from '../Pages/Dashboard';
+
 const routes = [
-    DATA_PRIVACY_ROUTE,
-    DASHBOARD
+  {
+    path: '/privacy',
+    exact: true,
+    component: DataPrivacy
+  },
+  {
+    path: '/dashboard',
+    exact: true,
+    component: Dashboard
+  }
 ]
 
 export default routes;
