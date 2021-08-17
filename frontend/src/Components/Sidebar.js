@@ -1,4 +1,4 @@
-import {Wrapper, MainLogo,LinkItem,NavigationBox} from "../Styled/Sidebar";
+import {Wrapper, MainLogo,LinkItem,NavigationWrapper} from "../Styled/Sidebar";
 import {Link} from 'react-router-dom'
 
 // This link items data are for testing view. We need to passing linkItems from smart component to this dumb component.
@@ -38,9 +38,9 @@ function SidebarContent() {
     return (
         <Wrapper>
             <MainLogo/>
-            <NavigationBox>
+            <NavigationWrapper>
             {linkItems.map(item => <Link to={item.to} key={item.to}><LinkItem>{item.title}</LinkItem></Link>)}
-            </NavigationBox>
+            </NavigationWrapper>
         </Wrapper>
     );
 }

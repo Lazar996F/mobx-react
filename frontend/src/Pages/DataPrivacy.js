@@ -1,8 +1,16 @@
-import {Box} from '../Styled/DataPrivacy'
+import {Box,Header,HeaderText,MenuButton} from '../Styled/DataPrivacy'
+import PageTitle from "../Components/PageTitle";
+import {HiViewGrid} from 'react-icons/hi'
 function DataPrivacy() {
     return (
         <Box>
-            <h1>Data Privacy</h1>
+            <Header>
+                <HeaderText>Lorem Managment Portal - Super Admin</HeaderText>
+                <MenuButton>
+                    <HiViewGrid/>
+                </MenuButton>
+            </Header>
+            <PageTitle title="Data Privacy" subtitle="Active and archive Data Privacy records"/>
         </Box>
     )
 }

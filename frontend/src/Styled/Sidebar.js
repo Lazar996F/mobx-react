@@ -6,6 +6,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   height: 100vh;
   padding:20px;
+  padding-top: 10px;
 `;
 
 export const MainLogo = styled.div`
@@ -25,10 +26,10 @@ export const LinkItem = styled.div`
   font-size: 14px;
 `
 
-export const NavigationBox = styled.div`
+export const NavigationWrapper = styled.div`
   a {
     text-decoration: none;
   }
-  padding-top: 80px;
+  padding-top: 64px;
   padding-left:10px;
 `
