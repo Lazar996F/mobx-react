@@ -1,6 +1,6 @@
 import {Table, HeaderRow, HeaderCell, TableContainer, Row, TableCell} from '../Styled/Table'
-import TimelineNotification from "./TimelineNotification";
-import DocumentTableCell from "./DocumentTableCell";
+import TimelineNotification from './TimelineNotification';
+import DocumentTableCell from './DocumentTableCell';
 
 // Data for testing views
 const dataPrivacy = [
@@ -44,8 +44,8 @@ const dataPrivacy = [
 
 function DataPrivacyTable() {
 
-  const TableRows = dataPrivacy.map(rowData => (
-    <Row>
+  const TableRows = dataPrivacy.map((rowData, key) => (
+    <Row key={key}>
       <TableCell>
         <TimelineNotification isDraft={rowData.timeline.isDraft} date={rowData.timeline.date}/>
       </TableCell>

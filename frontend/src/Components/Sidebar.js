@@ -1,4 +1,4 @@
-import { MainLogo, LinkItem, NavigationWrapper } from "../Styled/Sidebar";
+import { MainLogo, LinkItem, NavigationWrapper } from '../Styled/Sidebar';
 import { Link } from 'react-router-dom'
 
 // This link items data are for testing view. We need to passing linkItems from smart component to this dumb component.

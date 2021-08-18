@@ -7,7 +7,7 @@ import {
   ChangeButton,
   ArrowButton,
   ButtonsBox
-} from "../Styled/DocumentTableCell";
+} from '../Styled/DocumentTableCell';
 
 function DocumentTableCell({documentName}) {
   return (

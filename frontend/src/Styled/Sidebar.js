@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 // Main wrapper for sidebar component
 export const SidebarWrapper = styled.section`

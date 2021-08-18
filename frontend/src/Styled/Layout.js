@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Box = styled.section`
   background-color: #F2F2F2FF;
@@ -34,4 +34,4 @@ export const HeaderText = styled.h3`
 export const AppWrapper = styled.div`
   display: flex;
   flex-direction: row;
-`
+`;
