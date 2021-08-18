@@ -9,10 +9,8 @@ export const Box = styled.section`
 `;
 
 export const AppMenu = styled.div`
-  position: absolute;
-  top: 20px;
-  right: 20px;
   display: flex;
+  justify-content: flex-end;
 `;
 
 export const AppMenuButton = styled.button`
@@ -32,3 +30,8 @@ export const HeaderText = styled.h3`
   padding-right: 9px;
   font-weight: 500;
 `;
+
+export const AppWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`
