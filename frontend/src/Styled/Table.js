@@ -12,11 +12,20 @@ export const Table = styled.table`
     background: #F2F2F2FF;
     color: black;
     font-weight: 700;
-    width: 6%;
+    width: 8em;
+    min-width: 8em;
+    max-width: 8em;
+    padding: 0;
+    text-align: center;
   }
   tr td:first-child {
     background: #F2F2F2FF;
-    width: 6%;
+    display: flex;
+    flex-direction: column;
+    width: 8em;
+    min-width: 8em;
+    max-width: 8em;
+    text-align: center;
   }
 `;
 
@@ -38,7 +47,6 @@ export const Row = styled.tr`
 
 export const TableCell = styled.td`
   text-align: left;
-  padding: 8px;
   font-size: 0.8em;
   font-weight: 500;
 `;
