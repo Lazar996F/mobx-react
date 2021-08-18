@@ -19,7 +19,7 @@ export const TextContent = styled.div`
   border: ${props => props["isDraft"] ? '1px solid black' : '0'};
   font-size: 0.6em;
   border-radius: 40px 40px 40px 40px;
-  padding: 2px 11px;
+  padding: 1px 14px;
   background-color: ${props => !props["isDraft"] && '#CF1F14'};
   color: ${props => !props["isDraft"] && '#ffff'};
 `;

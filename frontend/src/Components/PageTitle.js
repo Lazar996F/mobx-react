@@ -4,6 +4,7 @@ const Title = styled.h1`
   font-size: 1.7em;
   margin-bottom: 0;
 `;
+
 const Subtitle = styled.h2`
   font-size: 0.8em;
   color: #808080c7;

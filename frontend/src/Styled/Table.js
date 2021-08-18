@@ -17,6 +17,7 @@ export const Table = styled.table`
     min-width: 8em;
     max-width: 8em;
     text-align: center;
+    padding: 0;
   }
 
   tr td:first-child {
@@ -36,7 +37,7 @@ export const HeaderRow = styled.tr`
 
 export const HeaderCell = styled.th`
   text-align: left;
-  padding: 15px 0px;
+  padding: 15px 20px;
   color: #80808087;
   font-size: 0.8em;
   font-weight: 400;
@@ -50,4 +51,5 @@ export const TableCell = styled.td`
   text-align: left;
   font-size: 0.8em;
   font-weight: 500;
+  padding-left: 20px;
 `;
