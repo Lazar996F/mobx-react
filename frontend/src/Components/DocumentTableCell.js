@@ -1,8 +1,15 @@
 import {ImFilePdf} from 'react-icons/im'
-import {DocumentBox,IconWrapper,DocumentName,ChangeButton,ArrowButton,ButtonsBox} from "../Styled/DocumentTableCell";
+import {MdKeyboardArrowDown,MdKeyboardArrowUp} from 'react-icons/md'
+import {
+  DocumentBox,
+  IconWrapper,
+  DocumentName,
+  ChangeButton,
+  ArrowButton,
+  ButtonsBox
+} from "../Styled/DocumentTableCell";
 
 function DocumentTableCell({documentName}) {
-
   return (
     <DocumentBox>
       <IconWrapper>
@@ -11,7 +18,9 @@ function DocumentTableCell({documentName}) {
       <DocumentName>{documentName}</DocumentName>
       <ButtonsBox>
         <ChangeButton>Change</ChangeButton>
-        <ArrowButton/>
+        <ArrowButton>
+          <MdKeyboardArrowDown size="1.4em" color="gray"/>
+        </ArrowButton>
       </ButtonsBox>
     </DocumentBox>
   );

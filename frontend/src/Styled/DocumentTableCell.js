@@ -17,7 +17,7 @@ export const DocumentName = styled.h1`
 
 export const ButtonsBox = styled.div`
   display: flex;
-  justify-content: end;
+  margin-left: auto;
 `;
 
 export const ChangeButton = styled.button`
@@ -26,8 +26,11 @@ export const ChangeButton = styled.button`
   height: 17px;
   font-size: 0.7em;
   background-color: inherit;
+  margin-right: 40px;
+  cursor: pointer;
 `;
 
 export const ArrowButton = styled.span`
-
+  padding-right: 20px;
+  cursor: pointer;
 `;

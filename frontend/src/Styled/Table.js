@@ -49,7 +49,6 @@ export const Row = styled.tr`
 `;
 
 export const TableCell = styled.td`
-  text-align: left;
   font-size: 0.8em;
   font-weight: 500;
   padding-left: 20px;

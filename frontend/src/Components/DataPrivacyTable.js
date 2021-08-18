@@ -73,7 +73,7 @@ function DataPrivacyTable() {
         </HeaderRow>
         </thead>
         <tbody>
-          {TableRows}
+        {TableRows}
         </tbody>
       </Table>
     </TableContainer>
