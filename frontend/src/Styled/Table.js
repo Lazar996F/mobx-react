@@ -28,6 +28,7 @@ export const Table = styled.table`
     min-width: 8em;
     max-width: 8em;
     text-align: center;
+    padding-left: 0;
   }
 `;
 
