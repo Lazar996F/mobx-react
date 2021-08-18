@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 
-export const Frame = styled.span`
+export const TextWrapper = styled.span`
   padding: 3px;
 `;
 
 export const VerticalLine = styled.div`
-  border-left: 1px solid black;
+  display: flex;
+  border-left: 2px solid #d8d8d8;
   min-height: 10px;
   height: inherit;
+  margin-left: 50%;
+  margin-top: 2px;
 `;
 
 export const TextContent = styled.div`
@@ -19,4 +22,9 @@ export const TextContent = styled.div`
   padding: 2px 11px;
   background-color: ${props => !props["isDraft"] && '#CF1F14'};
   color: ${props => !props["isDraft"] && '#ffff'};
+`;
+
+export const DateText = styled.span`
+  font-size: 11px;
+  font-weight: bold;
 `;

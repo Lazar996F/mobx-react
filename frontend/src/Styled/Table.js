@@ -8,6 +8,7 @@ export const TableContainer = styled.div`
 export const Table = styled.table`
   width: 100%;
   border-spacing: 0 3px;
+
   tr th:first-child {
     background: #F2F2F2FF;
     color: black;
@@ -15,9 +16,9 @@ export const Table = styled.table`
     width: 8em;
     min-width: 8em;
     max-width: 8em;
-    padding: 0;
     text-align: center;
   }
+
   tr td:first-child {
     background: #F2F2F2FF;
     display: flex;
@@ -35,7 +36,7 @@ export const HeaderRow = styled.tr`
 
 export const HeaderCell = styled.th`
   text-align: left;
-  padding: 8px;
+  padding: 15px 0px;
   color: #80808087;
   font-size: 0.8em;
   font-weight: 400;

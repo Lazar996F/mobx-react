@@ -1,4 +1,4 @@
-import {Frame, TextContent, VerticalLine} from '../Styled/TimelineNotification'
+import {TextWrapper, TextContent, VerticalLine,DateText} from '../Styled/TimelineNotification'
 
 function TimelineNotification({isDraft, date}) {
 
@@ -6,11 +6,11 @@ function TimelineNotification({isDraft, date}) {
 
   return (
     <>
-      <span>{date}</span>
-      <Frame>
+      <DateText>{date}</DateText>
+      <TextWrapper>
         <TextContent isDraft={isDraft}>{text}</TextContent>
-      </Frame>
-      <VerticalLine/>
+      </TextWrapper>
+        <VerticalLine/>
     </>
   );
 }

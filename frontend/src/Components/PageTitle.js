@@ -10,13 +10,16 @@ const Subtitle = styled.h2`
   font-weight: 400;
 `;
 
+const TitleWrapper = styled.div`
+  padding-left: 15px;
+`;
 
 function PageTitle({ title, subtitle }) {
   return (
-    <>
+    <TitleWrapper>
       <Title>{ title }</Title>
       <Subtitle>{ subtitle }</Subtitle>
-    </>
+    </TitleWrapper>
   );
 }
 
