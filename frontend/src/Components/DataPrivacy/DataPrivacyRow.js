@@ -1,13 +1,16 @@
-import {RowContent} from '../../Styled/DataPrivacy';
+import {RowContent, RoleText, ChangeButtonWrapper, ChangeButton} from '../../Styled/DataPrivacy';
 import AccordionRow from './AccordionRow';
-import ActiveDateInfo from './ActiveDateInfo'
+import ActiveDateInfo from './ActiveDateInfo';
+
 function DataPrivacyRow() {
   return (
     <AccordionRow>
       <RowContent>
         <ActiveDateInfo/>
-        <div>Item 2</div>
-        <div>Item 3</div>
+        <RoleText>Professional users, End user</RoleText>
+        <ChangeButtonWrapper>
+          <ChangeButton>Change</ChangeButton>
+        </ChangeButtonWrapper>
       </RowContent>
     </AccordionRow>
   );

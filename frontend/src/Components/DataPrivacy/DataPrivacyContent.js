@@ -1,4 +1,4 @@
-import {Container} from '../../Styled/DataPricacyContent';
+import {Container} from '../../Styled/DataPrivacy';
 import DataPrivacyRow from './DataPrivacyRow';
 
 function DataPrivacyContent() {

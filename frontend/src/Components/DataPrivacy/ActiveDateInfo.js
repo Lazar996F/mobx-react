@@ -1,15 +1,14 @@
-import {ActiveDateView,DateView} from '../../Styled/DataPrivacy'
-import Chip from '@material-ui/core/Chip';
+import {ActiveDateView, ChipText, DateView, TimelineChip,ChipWrapper} from '../../Styled/DataPrivacy';
 
 function ActiveDateInfo() {
   return (
     <ActiveDateView>
       <DateView>Active from 15.11.2021</DateView>
-      <Chip
-        size="small"
-        label="CURRENT"
-        color="secondary"
-      />
+      <ChipWrapper>
+        <TimelineChip>
+          <ChipText>CURRENT</ChipText>
+        </TimelineChip>
+      </ChipWrapper>
     </ActiveDateView>
   );
 }
