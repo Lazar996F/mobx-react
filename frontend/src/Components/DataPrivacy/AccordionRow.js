@@ -3,6 +3,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import {MdExpandMore} from 'react-icons/md'
+import AccordionContent from "./AccordionContent";
 
 function AccordionRow(props) {
 
@@ -16,9 +17,7 @@ function AccordionRow(props) {
           {props.children}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet
-          </Typography>
+          <AccordionContent/>
         </AccordionDetails>
       </Accordion>
   );
