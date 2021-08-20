@@ -6,7 +6,7 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: rgb(172, 172, 172);
+  background-color: black;
   display: inline-block;
   cursor: pointer;
   color: rgb(246, 246, 246);
@@ -16,3 +16,25 @@ export const Button = styled.button`
   text-decoration: none;
   border: 0;
 `;
+
+export const RowContent = styled.div`
+  display: flex;
+  width: 100%;
+  > * {
+    flex-grow: 1;
+    width: 33%;
+  }
+`;
+
+// View box 1/3 column inside row named RowContent
+export const ActiveDateView = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+// 1/2 Column inside row named ActiveDateView
+export const DateView = styled.div`
+  font-weight: bold;
+  font-size: 0.8em;
+`;
+

@@ -1,5 +1,4 @@
 import {useEffect} from 'react'
-import PageTitle from '../Components/PageTitle';
 
 function Dashboard(setTitle){
   useEffect(() => {
@@ -7,7 +6,6 @@ function Dashboard(setTitle){
   },[])
   return (
     <>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem consequuntur ea eum sapiente unde.</p>
     </>
   )
 }

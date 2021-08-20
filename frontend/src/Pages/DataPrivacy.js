@@ -1,11 +1,12 @@
 import {useEffect} from 'react'
-import { ButtonWrapper, Button } from '../Styled/DataPrivacy'
-import DataPrivacyContent from "../Components/DataPrivacyContent";
+import {ButtonWrapper, Button} from '../Styled/DataPrivacy'
+import DataPrivacyContent from "../Components/DataPrivacy/DataPrivacyContent";
 
 function DataPrivacy(setTitle) {
   useEffect(() => {
     setTitle('Data Privacy');
-  },[])
+  }, []);
+
   return (
     <>
       <ButtonWrapper>
