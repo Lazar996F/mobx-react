@@ -15,22 +15,13 @@ export const DocumentName = styled.h1`
   margin: 0;
 `;
 
-export const ButtonsBox = styled.div`
-  display: flex;
-  margin-left: auto;
-`;
-
 export const ChangeButton = styled.button`
-  color: #D6D6D6;
+  color: #868686d9;
   border: 1px solid #D6D6D6;
   height: 17px;
   font-size: 0.7em;
+  font-weight: bold;
   background-color: inherit;
   margin-right: 40px;
-  cursor: pointer;
-`;
-
-export const ArrowButton = styled.span`
-  padding-right: 20px;
   cursor: pointer;
 `;

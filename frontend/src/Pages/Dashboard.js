@@ -1,9 +1,13 @@
+import {useEffect} from 'react'
 import PageTitle from '../Components/PageTitle';
 
-function Dashboard(){
+function Dashboard(setTitle){
+  useEffect(() => {
+    setTitle('Dashboard');
+  },[])
   return (
     <>
-      <PageTitle title="Dashboard" subtitle="Active and archive Data Privacy records"/>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem consequuntur ea eum sapiente unde.</p>
     </>
   )
 }

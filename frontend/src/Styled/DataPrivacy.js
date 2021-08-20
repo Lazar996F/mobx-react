@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const ButtonWrapper = styled.div`
-  float: right;
-  padding-right: 20px;
+  display: flex;
+  flex-direction: row-reverse;
 `;
 
 export const Button = styled.button`
