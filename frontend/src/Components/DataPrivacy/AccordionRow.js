@@ -3,12 +3,12 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import {MdExpandMore} from 'react-icons/md'
 import AccordionContent from './AccordionContent';
-import {AccordionBox} from '../../Styled/DataPrivacy';
+import {AccordionBox, RowWrapper, CircleDot, LineCircleWrapper, VerticalLine} from '../../Styled/DataPrivacy';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   box: {
-   borderRadius: '0!important'
+    boxShadow: 'none'
   },
 }));
 
@@ -16,6 +16,11 @@ const useStyles = makeStyles((theme) => ({
 function AccordionRow(props) {
 const classes = useStyles();
   return (
+    <RowWrapper>
+      <LineCircleWrapper>
+        <CircleDot/>
+        <VerticalLine/>
+      </LineCircleWrapper>
     <AccordionBox>
       <Accordion className={classes.box}>
         <AccordionSummary
@@ -30,6 +35,7 @@ const classes = useStyles();
         </AccordionDetails>
       </Accordion>
     </AccordionBox>
+    </RowWrapper>
   );
 }
 

@@ -56,7 +56,6 @@ export const ChipText = styled.span`
 `;
 
 export const ChipWrapper = styled.div`
-  flex: 1;
   padding-left: 10px;
   padding-top: 2px;
 `;
@@ -83,16 +82,47 @@ export const ChangeButton = styled.button`
 `;
 
 export const AccordionBox = styled.div`
-position: relative;
-}
-    :before {
+  position: relative;
+  flex:1;
+  :before {
     content: "";
     position: absolute;
-    height: 0px;
-    width: 0px;
+    height: 0;
+    width: 0;
     top: 14px;
     left: -18px;
     border-width: 9px;
     border-color: transparent white transparent transparent;
     border-style: solid;
+  }
+`;
+
+export const RowWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const LineCircleWrapper = styled.div`
+  padding-top: 13px;
+  padding-right: 13px;
+`;
+
+export const CircleDot = styled.span`
+  display: flex;
+  height: 13px;
+  width: 13px;
+  background-color: #ffff;
+  border-radius: 50%;
+  border: 1px solid;
+`;
+
+export const VerticalLine = styled.div`
+  //height: 23px;
+ border-left: 2px solid #80808054;
+ // left: 7px;
+  //top: 40px;
+  margin-left: 6px;
+  margin-top: 5px;
+  height: inherit;
+  min-height: 21px;
 `;
