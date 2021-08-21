@@ -81,3 +81,18 @@ export const ChangeButton = styled.button`
   color: #80808059;
   cursor: pointer;
 `;
+
+export const AccordionBox = styled.div`
+position: relative;
+}
+    :before {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 14px;
+    left: -18px;
+    border-width: 9px;
+    border-color: transparent white transparent transparent;
+    border-style: solid;
+`;

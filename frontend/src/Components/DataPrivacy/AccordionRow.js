@@ -1,14 +1,23 @@
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
 import {MdExpandMore} from 'react-icons/md'
-import AccordionContent from "./AccordionContent";
+import AccordionContent from './AccordionContent';
+import {AccordionBox} from '../../Styled/DataPrivacy';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  box: {
+   borderRadius: '0!important'
+  },
+}));
+
 
 function AccordionRow(props) {
-
+const classes = useStyles();
   return (
-      <Accordion>
+    <AccordionBox>
+      <Accordion className={classes.box}>
         <AccordionSummary
           expandIcon={<MdExpandMore/>}
           aria-controls="panel2a-content"
@@ -20,6 +29,7 @@ function AccordionRow(props) {
           <AccordionContent/>
         </AccordionDetails>
       </Accordion>
+    </AccordionBox>
   );
 }
 
