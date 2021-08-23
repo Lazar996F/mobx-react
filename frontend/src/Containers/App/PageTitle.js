@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { useContext } from 'react';
 
-import AppContext from '../AppContext';
+import AppContext from './AppContext';
 
 const Title = styled.h1`
   font-size: 1.7em;

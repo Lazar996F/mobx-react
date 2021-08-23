@@ -1,8 +1,7 @@
 import { useContext, useEffect } from 'react';
-
-import { ButtonWrapper, Button } from '../../Styled/DataPrivacy';
-import DataPrivacyContent from '../../Components/DataPrivacy/DataPrivacyContent';
-import AppContext, { SET_TITLE } from '../../AppContext';
+import DataPrivacyContent from './DataPrivacyContent';
+import AppContext, { SET_TITLE } from '../App/AppContext';
+import ButtonAddNew from './ButtonAddNew';
 import dummyData from './DummyData';
 
 
@@ -18,9 +17,7 @@ function DataPrivacy() {
 
   return (
     <>
-      <ButtonWrapper>
-        <Button>Add new Data Privacy</Button>
-      </ButtonWrapper>
+      <ButtonAddNew/>
       <DataPrivacyContent timelineData={ dummyData }/>
     </>
   )

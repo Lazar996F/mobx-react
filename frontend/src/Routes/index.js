@@ -1,5 +1,5 @@
-import DataPrivacy from '../Pages/DataPrivacy';
-import Dashboard from '../Pages/Dashboard';
+import DataPrivacy from '../Containers/DataPrivacy';
+import Dashboard from '../Containers/Dashboard';
 
 const routes = [
   {

@@ -1,24 +1,15 @@
 import styled from 'styled-components';
-
-export const AppMenuButton = styled.button`
-  border: none;
-  background-color: inherit;
-
-  :hover {
-    background-color: #aaadab;
-    border-radius: 50%;
-  }
-`;
-
-export const HeaderText = styled.h3`
-  font-size: 0.8em;
-  display: inline;
-  margin-top: 8px;
-  padding-right: 9px;
-  font-weight: 500;
-`;
+import { COLOR_GREY } from '../Utils/styles';
 
 export const AppWrapper = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+export const AppContentBox = styled.section`
+  background-color: ${COLOR_GREY};
+  width: 100%;
+  padding-top: 12px;
+  padding-left: 30px;
+  padding-right: 30px;
 `;

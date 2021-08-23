@@ -1,6 +1,6 @@
 import { createContext, useReducer } from 'react'
 
-const AppContext = createContext();
+const AppContext = createContext(undefined);
 
 export const SET_TITLE = 'SET_TITLE';
 
