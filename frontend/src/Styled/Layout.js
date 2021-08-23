@@ -1,18 +1,5 @@
 import styled from 'styled-components';
 
-export const Box = styled.section`
-  background-color: #F2F2F2FF;
-  width: 100%;
-  padding-top: 12px;
-  padding-left: 30px;
-  padding-right: 30px;
-`;
-
-export const AppMenu = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
-
 export const AppMenuButton = styled.button`
   border: none;
   background-color: inherit;

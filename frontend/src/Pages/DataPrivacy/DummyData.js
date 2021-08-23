@@ -1,7 +1,3 @@
-import {useEffect} from 'react'
-import {ButtonWrapper, Button} from '../Styled/DataPrivacy'
-import DataPrivacyContent from "../Components/DataPrivacy/DataPrivacyContent";
-
 const dummyData = [
   {
     role: 'Professional users, End users',
@@ -33,21 +29,6 @@ const dummyData = [
     content: 'Lorem ipsum bla bla',
     date: '16.06.2020'
   }
-]
-function DataPrivacy(setTitle) {
+];
 
-  useEffect(() => {
-    setTitle('Data Privacy');
-  }, []);
-
-  return (
-    <>
-      <ButtonWrapper>
-        <Button>Add new Data Privacy</Button>
-      </ButtonWrapper>
-      <DataPrivacyContent timelineData={dummyData} />
-    </>
-  )
-}
-
-export default DataPrivacy;
+export default dummyData;

@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { useContext } from 'react';
+
+import AppContext from '../AppContext';
 
 const Title = styled.h1`
   font-size: 1.7em;
@@ -15,11 +18,13 @@ const TitleWrapper = styled.div`
   padding-left: 15px;
 `;
 
-function PageTitle({ title, subtitle }) {
+function PageTitle() {
+  const { state } = useContext(AppContext);
+
   return (
     <TitleWrapper>
-      <Title>{ title }</Title>
-      <Subtitle>{ subtitle }</Subtitle>
+      <Title>{ state?.title }</Title>
+      <Subtitle>{ state?.subtitle }</Subtitle>
     </TitleWrapper>
   );
 }
