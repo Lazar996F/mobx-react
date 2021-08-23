@@ -28,6 +28,7 @@ export const Button = styled.button`
 export const RowContent = styled.div`
   display: flex;
   width: 100%;
+  padding: 10px 0;
 `;
 
 // View box 1/3 column inside row named RowContent
@@ -89,7 +90,7 @@ export const AccordionBox = styled.div`
     position: absolute;
     height: 0;
     width: 0;
-    top: 14px;
+    top: 23px;
     left: -18px;
     border-width: 9px;
     border-color: transparent white transparent transparent;
@@ -100,12 +101,14 @@ export const AccordionBox = styled.div`
 export const RowWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 `;
 
 export const LineCircleWrapper = styled.div`
-  padding-top: 13px;
   padding-right: 13px;
+  padding-top: 22px;
 `;
+
 
 export const CircleDot = styled.span`
   display: flex;
@@ -117,12 +120,9 @@ export const CircleDot = styled.span`
 `;
 
 export const VerticalLine = styled.div`
-  //height: 23px;
- border-left: 2px solid #80808054;
- // left: 7px;
-  //top: 40px;
+  border-left: 2px solid #80808054;
   margin-left: 6px;
-  margin-top: 5px;
-  height: inherit;
-  min-height: 21px;
+  margin-top: 10px;
+  height: 100%;
+  align-items: stretch;
 `;

@@ -1,13 +1,10 @@
 import {Container} from '../../Styled/DataPrivacy';
 import DataPrivacyRow from './DataPrivacyRow';
 
-function DataPrivacyContent() {
+function DataPrivacyContent({timelineData}) {
   return (
     <Container>
-
-
-      <DataPrivacyRow />
-      <DataPrivacyRow />
+      {timelineData.map( (item,key) => <DataPrivacyRow key={key} role={item.role} date={item.date} pdf={item.pdf} textContent={item.content}/>)}
     </Container>
   );
 }
