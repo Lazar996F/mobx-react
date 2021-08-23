@@ -1,6 +1,6 @@
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
-import { MdExpandMore } from 'react-icons/md'
+import { MdExpandMore } from 'react-icons/md';
 import { makeStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
 import AccordionContent from './AccordionContent';
@@ -10,6 +10,7 @@ export const RowWrapper = styled.div`
   flex-direction: row;
   margin-bottom: 10px;
 `;
+
 export const AccordionBox = styled.div`
   position: relative;
   flex: 1;
@@ -54,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: 'none'
   },
 }));
-
 
 function AccordionRow(props) {
   const classes = useStyles();

@@ -6,7 +6,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import { AppContentBox, AppWrapper } from '../../Styled/Layout';
+import { AppContentBox, AppWrapper } from '../../Components/Styled/Layout';
 import PageTitle from './PageTitle';
 import { AppProvider } from './AppContext';
 import AppMenu from './AppMenu';

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR_GREY } from '../Utils/styles';
+import { COLOR_GREY } from '../../Utils/styles';
 
 export const AppWrapper = styled.div`
   display: flex;

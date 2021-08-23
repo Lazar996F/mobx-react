@@ -25,7 +25,9 @@ export const TextWrapper = styled.div`
 function AppMenu() {
   return (
     <AppMenuWrapper>
-      <TextWrapper><H3>Lorem Management Portal - Super Admin</H3></TextWrapper>
+      <TextWrapper>
+        <H3>Lorem Management Portal - Super Admin</H3>
+      </TextWrapper>
     <AppMenuButton>
       <HiViewGrid size="1.4em"/>
     </AppMenuButton>

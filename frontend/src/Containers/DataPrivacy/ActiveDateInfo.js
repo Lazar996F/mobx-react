@@ -1,18 +1,13 @@
 import styled from 'styled-components';
-
+import {H3} from '../../Components/H3';
 // View box 1/3 column inside row named RowContent
 export const ActiveDateView = styled.div`
   display: flex;
   flex-direction: row;
 `;
+
 export const ChipText = styled.span`
   font-size: 0.46em;
-`;
-
-// 1/2 Column inside row named ActiveDateView
-export const DateView = styled.div`
-  font-weight: bold;
-  font-size: 0.76em;
 `;
 
 export const TimelineChip = styled.div`
@@ -32,7 +27,7 @@ export const ChipWrapper = styled.div`
 function ActiveDateInfo() {
   return (
     <ActiveDateView>
-      <DateView>Active from 15.11.2021</DateView>
+      <H3>Active from 15.11.2021</H3>
       <ChipWrapper>
         <TimelineChip>
           <ChipText>CURRENT</ChipText>
