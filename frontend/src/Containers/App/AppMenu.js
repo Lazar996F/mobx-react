@@ -1,5 +1,6 @@
 import { HiViewGrid } from 'react-icons/hi';
 import styled from 'styled-components';
+import {H3} from '../../Components/H3';
 
 export const AppMenuButton = styled.button`
   border: none;
@@ -16,18 +17,15 @@ export const AppMenuButton = styled.button`
   justify-content: flex-end;
 `;
 
-export const Text = styled.h3`
-  font-size: 0.8em;
+export const TextWrapper = styled.div`
   display: inline;
-  margin-top: 8px;
   padding-right: 9px;
-  font-weight: 500;
 `;
 
 function AppMenu() {
   return (
     <AppMenuWrapper>
-      <Text>Lorem Management Portal - Super Admin</Text>
+      <TextWrapper><H3>Lorem Management Portal - Super Admin</H3></TextWrapper>
     <AppMenuButton>
       <HiViewGrid size="1.4em"/>
     </AppMenuButton>

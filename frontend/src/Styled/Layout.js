@@ -9,7 +9,7 @@ export const AppWrapper = styled.div`
 export const AppContentBox = styled.section`
   background-color: ${COLOR_GREY};
   width: 100%;
-  padding-top: 12px;
+  padding-top: 18px;
   padding-left: 30px;
   padding-right: 30px;
 `;
