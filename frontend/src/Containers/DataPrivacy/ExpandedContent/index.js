@@ -1,9 +1,10 @@
 import AccordionDetails from '@material-ui/core/AccordionDetails';
-//we need to pass date and rendering it into h1 element
+import H3 from '../../../Components/H3';
+
 function ExpandedContent() {
   return (
     <AccordionDetails>
-      <h3>Data privacy changes on the date 15.11.2021</h3>
+      <H3>Data privacy changes on the date 15.11.2021</H3>
     </AccordionDetails>
   );
 }

@@ -1,4 +1,3 @@
-// Main wrapper for sidebar component
 import styled from 'styled-components';
 
  export const Wrapper = styled.section`

@@ -9,7 +9,7 @@ export const Button = styled.button`
   background-color: black;
   display: inline-block;
   cursor: pointer;
-  color: rgb(246, 246, 246);
+  color: #ffff;
   font-family: Arial, sans-serif;
   font-size: 0.8em;
   padding: 10px 25px;

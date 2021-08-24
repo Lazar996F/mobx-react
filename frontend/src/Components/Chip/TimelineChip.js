@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import {Wrapper} from './Wrapper';
-import {Label} from './Label';
+import { Wrapper } from './Wrapper';
+import { Label } from './Label';
 
 export const Chip = styled.div`
   padding: 0 6px;

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import H1 from '../../Components/H1/H1';
+import H1 from '../../Components/H1';
 import Context from './Context';
-import H2 from '../../Components/H2/H2';
+import H2 from '../../Components/H2';
 
 
 function PageTitle() {

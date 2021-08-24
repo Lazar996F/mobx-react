@@ -7,7 +7,7 @@ import ExpandedContent from './ExpandedContent';
 import CircleWithVerticalLine from '../../Components/CircleWithVerticalLine';
 import TimelineChip from '../../Components/Chip/TimelineChip';
 import Button from '../../Components/Button/Secondary';
-import { H3 } from '../../Components/H3/H3';
+import  H3 from '../../Components/H3';
 
 export const RoleText = styled.div`
   flex: 2;

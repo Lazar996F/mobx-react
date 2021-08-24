@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { H3 } from '../../Components/H3/H3';
+import H3 from '../../Components/H3';
 import ButtonAppMenu from './ButtonAppMenu';
 
 export const AppMenuWrapper = styled.div`

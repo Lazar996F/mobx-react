@@ -11,7 +11,7 @@ export const Label = styled.label`
   font-size: 0.8em;
 `;
 
-function ButtonChange() {
+function Secondary() {
   return (
     <ChangeButton>
       <Label>Change</Label>
@@ -19,4 +19,4 @@ function ButtonChange() {
   );
 }
 
-export default ButtonChange;
+export default Secondary;
