@@ -1,8 +1,7 @@
-import React from 'react';
 import { HiViewGrid } from 'react-icons/hi';
 import styled from 'styled-components';
 
-export const AppMenuButton = styled.button`
+export const Wrapper = styled.button`
   border: none;
   background-color: inherit;
 
@@ -12,12 +11,12 @@ export const AppMenuButton = styled.button`
   }
 `;
 
-function ButtonAppMenu() {
+function Button() {
   return (
-    <AppMenuButton>
+    <Wrapper>
       <HiViewGrid size="1.4em"/>
-    </AppMenuButton>
+    </Wrapper>
   );
 }
 
-export default ButtonAppMenu;
+export default Button;

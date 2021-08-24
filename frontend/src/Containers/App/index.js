@@ -10,7 +10,7 @@ import { ContentBox } from '../../Components/Layout/ContentBox';
 import { Wrapper } from '../../Components/Layout/Wrapper';
 import PageTitle from './PageTitle';
 import { AppProvider } from './Context';
-import TopMenu from './TopMenu';
+import TopMenu from '../../Components/TopMenu';
 
 function App() {
   return (
