@@ -3,7 +3,6 @@ import H1 from '../../Components/H1';
 import Context from './Context';
 import H2 from '../../Components/H2';
 
-
 function PageTitle() {
   const { state } = useContext(Context);
 

@@ -19,7 +19,7 @@ function App() {
         <BrowserRouter>
             <Sidebar/>
           <ContentBox>
-            <TopMenu/>
+            <TopMenu label="Lorem Management Portal - Super Admin"/>
             <PageTitle />
             <Switch>
               { routes.map((route, key) => (

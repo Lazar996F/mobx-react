@@ -2,6 +2,40 @@ import { createContext, useReducer } from 'react'
 
 const AppContext = createContext(undefined);
 
+const initialState = {
+  linkItems: [
+    {
+      title: "Dashboard",
+      to: '/dashboard'
+    },
+    {
+      title: "Companies",
+      to: '/companies'
+    },
+    {
+      title: "Branches",
+      to: '/branches'
+    },
+    {
+      title: "Users",
+      to: '/users'
+    },
+    {
+      title: "Terms of Service",
+      to: '/service'
+    },
+    {
+      title: "Data Privacy",
+      to: '/privacy'
+    },
+    {
+      title: "General settings",
+      to: '/settings'
+    }
+  ],
+  title: '',
+  subtitle: ''
+}
 export const SET_TITLE = 'SET_TITLE';
 
 const reducer = (state, action) => {
@@ -20,11 +54,11 @@ const reducer = (state, action) => {
 export const AppProvider = (props) => {
 
   // we need to add right an initial action
-  const [state, dispatch] = useReducer(reducer, {});
+  const [ state, dispatch ] = useReducer(reducer, initialState);
 
   return (
     <AppContext.Provider value={ { state, dispatch } }>
-      {props.children}
+      { props.children }
     </AppContext.Provider>
   );
 }

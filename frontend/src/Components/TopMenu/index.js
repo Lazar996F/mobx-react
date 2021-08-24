@@ -2,10 +2,10 @@ import H3 from '../../Components/H3';
 import Button from './Button';
 import Wrapper from './Wrapper';
 
-function TopMenu() {
+function TopMenu({label}) {
   return (
     <Wrapper>
-        <H3>Lorem Management Portal - Super Admin</H3>
+        <H3>{label}</H3>
       <Button/>
     </Wrapper>
   );

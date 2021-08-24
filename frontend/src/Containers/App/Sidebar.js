@@ -1,40 +1,9 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from '../../Components/Logo';
-import H3 from '../../Components/H3';
 import {Wrapper} from '../../Components/Sidebar/Wrapper';
-import {COLOR_SECONDARY} from '../../Utils/styles';
-// This link items data are for testing view. We need to passing linkItems from smart component to this dumb component.
-const linkItems = [
-  {
-    title: "Dashboard",
-    to: '/dashboard'
-  },
-  {
-    title: "Companies",
-    to: '/companies'
-  },
-  {
-    title: "Branches",
-    to: '/branches'
-  },
-  {
-    title: "Users",
-    to: '/users'
-  },
-  {
-    title: "Terms of Service",
-    to: '/service'
-  },
-  {
-    title: "Data Privacy",
-    to: '/privacy'
-  },
-  {
-    title: "General settings",
-    to: '/settings'
-  }
-]
+import Context from './Context';
 
 // Style for each individual link item
 export const LinkItem = styled.div`
@@ -52,11 +21,13 @@ export const NavigationWrapper = styled.div`
 `;
 
 function SidebarContent() {
+  const { state } = useContext(Context);
+
   return (
     <Wrapper>
       <Logo/>
       <NavigationWrapper>
-        { linkItems.map(item => <Link to={ item.to } key={ item.to }><LinkItem>{ item.title }</LinkItem></Link>) }
+        { state.linkItems.map(item => <Link to={ item.to } key={ item.to }><LinkItem>{ item.title }</LinkItem></Link>) }
       </NavigationWrapper>
     </Wrapper>
   );
