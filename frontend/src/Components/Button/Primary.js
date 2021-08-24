@@ -17,7 +17,7 @@ export const Button = styled.button`
   border: 0;
 `;
 
-function ButtonAddNew() {
+function Primary() {
   return (
     <ButtonWrapper>
       <Button>Add new Data Privacy</Button>
@@ -25,4 +25,4 @@ function ButtonAddNew() {
   );
 }
 
-export default ButtonAddNew;
+export default Primary;

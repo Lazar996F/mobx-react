@@ -1,6 +1,6 @@
 import { createContext, useReducer } from 'react'
 
-const DataPrivacyContext = createContext(undefined);
+const AppContext = createContext(undefined);
 
 export const SET_TITLE = 'SET_TITLE';
 
@@ -19,6 +19,7 @@ const reducer = (state, action) => {
 
 export const AppProvider = (props) => {
 
+  // we need to add right an initial action
   const [state, dispatch] = useReducer(reducer, {});
 
   return (

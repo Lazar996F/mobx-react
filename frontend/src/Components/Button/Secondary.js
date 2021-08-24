@@ -13,9 +13,9 @@ export const Label = styled.label`
 
 function ButtonChange() {
   return (
-      <ChangeButton>
-        <Label>Change</Label>
-      </ChangeButton>
+    <ChangeButton>
+      <Label>Change</Label>
+    </ChangeButton>
   );
 }
 

@@ -1,4 +1,4 @@
-import routes from '../../Routes'
+import routes from '../../Routes';
 import {
   BrowserRouter,
   Switch,
@@ -6,19 +6,20 @@ import {
   Redirect
 } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import { AppContentBox, AppWrapper } from '../../Components/Styled/Layout';
+import { ContentBox } from '../../Components/Layout/ContentBox';
+import { Wrapper } from '../../Components/Layout/Wrapper';
 import PageTitle from './PageTitle';
-import { AppProvider } from './AppContext';
-import AppMenu from './AppMenu';
+import { AppProvider } from './Context';
+import TopMenu from './TopMenu';
 
 function App() {
   return (
     <AppProvider>
-      <AppWrapper>
+      <Wrapper>
         <BrowserRouter>
             <Sidebar/>
-          <AppContentBox>
-            <AppMenu/>
+          <ContentBox>
+            <TopMenu/>
             <PageTitle />
             <Switch>
               { routes.map((route, key) => (
@@ -29,9 +30,9 @@ function App() {
                 <Redirect to="/privacy"/>
               </Route>
             </Switch>
-          </AppContentBox>
+          </ContentBox>
         </BrowserRouter>
-      </AppWrapper>
+      </Wrapper>
     </AppProvider>
   );
 }

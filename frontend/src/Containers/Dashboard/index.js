@@ -1,9 +1,9 @@
 import { useContext, useEffect } from 'react';
 
-import AppContext, { SET_TITLE } from '../App/AppContext';
+import Context, { SET_TITLE } from '../App/Context';
 
 function Dashboard() {
-  const { _, dispatch } = useContext(AppContext);
+  const { _, dispatch } = useContext(Context);
 
   useEffect(() => {
     dispatch({

@@ -1,21 +1,17 @@
-import styled from 'styled-components'
 import { useContext } from 'react';
-import H1 from '../../Components/H1';
-import AppContext from './AppContext';
-import H2 from '../../Components/H2';
+import H1 from '../../Components/H1/H1';
+import Context from './Context';
+import H2 from '../../Components/H2/H2';
 
-const TitleWrapper = styled.div`
-  padding-left: 15px;
-`;
 
 function PageTitle() {
-  const { state } = useContext(AppContext);
+  const { state } = useContext(Context);
 
   return (
-    <TitleWrapper>
+    <div className="padding-left-15">
       <H1>{ state?.title }</H1>
       <H2>{ state?.subtitle }</H2>
-    </TitleWrapper>
+    </div>
   );
 }
 

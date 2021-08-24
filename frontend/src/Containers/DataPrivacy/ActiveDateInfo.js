@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {H3} from '../../Components/H3';
+import {H3} from '../../Components/H3/H3';
 // View box 1/3 column inside row named RowContent
 export const ActiveDateView = styled.div`
   display: flex;

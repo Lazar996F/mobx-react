@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { H3 } from '../../Components/H3';
+import { H3 } from '../../Components/H3/H3';
 import ButtonAppMenu from './ButtonAppMenu';
 
 export const AppMenuWrapper = styled.div`
@@ -12,7 +12,7 @@ export const TextWrapper = styled.div`
   padding-right: 9px;
 `;
 
-function AppMenu() {
+function TopMenu() {
   return (
     <AppMenuWrapper>
       <TextWrapper>
@@ -23,4 +23,4 @@ function AppMenu() {
   );
 }
 
-export default AppMenu;
+export default TopMenu;

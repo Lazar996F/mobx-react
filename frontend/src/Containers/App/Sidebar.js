@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import {Logo} from '../../Components/Logo';
-import {H3} from '../../Components/H3';
-import {SidebarWrapper} from '../../Components/Styled/Layout';
+import {Logo} from '../../Components/Logo/Logo';
+import {H3} from '../../Components/H3/H3';
+import {Wrapper} from '../../Components/Sidebar/Wrapper';
 import {COLOR_SECONDARY} from '../../Utils/styles';
 // This link items data are for testing view. We need to passing linkItems from smart component to this dumb component.
 const linkItems = [
@@ -53,12 +53,12 @@ export const NavigationWrapper = styled.div`
 
 function SidebarContent() {
   return (
-    <SidebarWrapper>
+    <Wrapper>
       <Logo/>
       <NavigationWrapper>
         { linkItems.map(item => <Link to={ item.to } key={ item.to }><LinkItem><H3>{ item.title }</H3></LinkItem></Link>) }
       </NavigationWrapper>
-    </SidebarWrapper>
+    </Wrapper>
   );
 }
 
