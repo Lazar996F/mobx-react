@@ -1,18 +1,8 @@
 import styled from 'styled-components'
 import { useContext } from 'react';
-
+import H1 from '../../Components/H1';
 import AppContext from './AppContext';
-
-const Title = styled.h1`
-  font-size: 1.7em;
-  margin-bottom: 0;
-`;
-
-const Subtitle = styled.h2`
-  font-size: 0.8em;
-  color: #808080c7;
-  font-weight: 400;
-`;
+import H2 from '../../Components/H2';
 
 const TitleWrapper = styled.div`
   padding-left: 15px;
@@ -23,8 +13,8 @@ function PageTitle() {
 
   return (
     <TitleWrapper>
-      <Title>{ state?.title }</Title>
-      <Subtitle>{ state?.subtitle }</Subtitle>
+      <H1>{ state?.title }</H1>
+      <H2>{ state?.subtitle }</H2>
     </TitleWrapper>
   );
 }

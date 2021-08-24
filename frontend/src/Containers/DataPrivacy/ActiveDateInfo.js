@@ -21,7 +21,7 @@ export const TimelineChip = styled.div`
 
 export const ChipWrapper = styled.div`
   padding-left: 10px;
-  padding-top: 2px;
+  padding-top: 11px;
 `;
 
 function ActiveDateInfo() {

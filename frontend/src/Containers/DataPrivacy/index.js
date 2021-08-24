@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import DataPrivacyContent from './DataPrivacyContent';
 import AppContext, { SET_TITLE } from '../App/AppContext';
 import ButtonAddNew from './ButtonAddNew';
-import dummyData from './DummyData';
+import dummyData from './dummyData';
 
 
 function DataPrivacy() {

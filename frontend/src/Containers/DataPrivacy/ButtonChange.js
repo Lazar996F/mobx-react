@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-export const ChangeButtonWrapper = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-`;
-
 export const ChangeButton = styled.button`
   background-color: inherit;
   border: 1px solid #8080802e;
@@ -13,11 +7,15 @@ export const ChangeButton = styled.button`
   cursor: pointer;
 `;
 
+export const Label = styled.label`
+  font-size: 0.8em;
+`;
+
 function ButtonChange() {
   return (
-    <ChangeButtonWrapper>
-      <ChangeButton>Change</ChangeButton>
-    </ChangeButtonWrapper>
+      <ChangeButton>
+        <Label>Change</Label>
+      </ChangeButton>
   );
 }
 

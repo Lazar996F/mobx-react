@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import {Logo} from '../../Components/Logo';
-import {H3} from '../../Components/H3'
+import {H3} from '../../Components/H3';
+import {SidebarWrapper} from '../../Components/Styled/Layout';
+import {COLOR_SECONDARY} from '../../Utils/styles';
 // This link items data are for testing view. We need to passing linkItems from smart component to this dumb component.
 const linkItems = [
   {
@@ -34,18 +36,10 @@ const linkItems = [
   }
 ]
 
-// Main wrapper for sidebar component
-export const SidebarWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding: 10px 20px 20px;
-`;
-
 // Style for each individual link item
 export const LinkItem = styled.div`
   padding-top: 20px;
-  color: rgb(135, 135, 135);
+  color: ${COLOR_SECONDARY};
 `;
 
 export const NavigationWrapper = styled.div`

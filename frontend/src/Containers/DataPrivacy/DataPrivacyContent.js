@@ -1,17 +1,11 @@
-import styled from 'styled-components';
 import DataPrivacyRow from './DataPrivacyRow';
-
-export const Container = styled.div`
-  padding-top: 15px;
-  display: flex;
-  flex-direction: column;
-`;
+import {DataPrivacyContentWrapper} from '../../Components/Styled/Layout';
 
 function DataPrivacyContent({ timelineData }) {
   return (
-    <Container>
+    <DataPrivacyContentWrapper>
       {timelineData.map( (item,key) => <DataPrivacyRow key={key} role={item.role} date={item.date} pdf={item.pdf} textContent={item.content}/>)}
-    </Container>
+    </DataPrivacyContentWrapper>
   );
 }
 

@@ -8,19 +8,21 @@ import AccordionContent from './AccordionContent';
 export const RowWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px 0;
 `;
 
 export const AccordionBox = styled.div`
   position: relative;
   flex: 1;
+  line-height: 34px;
 
   :before {
     content: "";
     position: absolute;
     height: 0;
     width: 0;
-    top: 23px;
+    top: 20px;
     left: -18px;
     border-width: 9px;
     border-color: transparent white transparent transparent;

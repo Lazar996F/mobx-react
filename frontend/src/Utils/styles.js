@@ -1,1 +1,3 @@
-export const COLOR_GREY = '#F2F2F2FF';
+export const BACKGROUND_COLOR_SECONDARY = '#F2F2F2FF';
+export const COLOR_SECONDARY = '#808080c7';
+
