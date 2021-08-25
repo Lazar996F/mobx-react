@@ -11,22 +11,23 @@ const Wrapper = styled.div`
   padding-right: 30px;
 `;
 
-const makeInitials = (username) => {
-  let rgx = new RegExp(/(\p{L}{1})\p{L}+/, 'gu');
+const getInitials = (name) => {
+  let initials = name.split(' ');
 
-  let initials = [...username.matchAll(rgx)] || [];
+  if(initials.length > 1) {
+    initials = initials.shift().charAt(0) + initials.pop().charAt(0);
+  } else {
+    initials = name.substring(0, 2);
+  }
 
-  initials = (
-    (initials.shift()?.[1] || '') + (initials.pop()?.[1] || '')
-  ).toUpperCase();
-  return initials;
+  return initials.toUpperCase();
 }
 
 function UserInfoBar({username}) {
-  const label = makeInitials(username);
+  const initials = getInitials(username);
   return (
     <Wrapper>
-      <Avatar label={label}/>
+      <Avatar label={initials}/>
       <H3>{username}</H3>
     </Wrapper>
   );
