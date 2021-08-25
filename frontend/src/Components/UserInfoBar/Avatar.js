@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(() => ({
   root: {
     backgroundColor: 'black',
-    width: '28px',
-    height: '28px',
+    width: '30px',
+    height: '30px',
     lineHeight: '0',
     fontSize: '0.8em'
   },

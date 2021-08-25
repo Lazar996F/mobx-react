@@ -5,19 +5,22 @@ import Logo from '../../Components/Logo';
 import {Wrapper} from '../../Components/Sidebar/Wrapper';
 import Context from './Context';
 import UserInfoBar from '../../Components/UserInfoBar';
-// Style for each individual link item
-export const LinkItem = styled.div`
-  padding-top: 20px;
-  color: #959595;
-  font-size: 0.8em;
-`;
 
 export const NavigationWrapper = styled.div`
-  a {
-    text-decoration: none;
-  }
   padding-top: 64px;
   padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    padding-top: 20px;
+    color: #959595;
+    font-size: 0.8em;
+  }
+  a:focus{
+    color: black;
+    font-weight: bold;
+  }
 `;
 
 function SidebarContent() {
@@ -27,7 +30,7 @@ function SidebarContent() {
     <Wrapper>
       <Logo/>
       <NavigationWrapper>
-        { state.linkItems.map(item => <Link to={ item.to } key={ item.to }><LinkItem>{ item.title }</LinkItem></Link>) }
+        { state.linkItems.map(item => <Link to={ item.to } key={ item.to } className="a-focus-color">{ item.title }</Link>) }
       </NavigationWrapper>
       <UserInfoBar username={state.username}/>
     </Wrapper>
