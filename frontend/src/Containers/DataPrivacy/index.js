@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useMemo } from 'react';
 import Context, { SET_TITLE } from '../App/Context';
 import ButtonAddNew from '../../Components/Button/Primary';
 import dummyData from './dummyData';
@@ -14,12 +14,16 @@ function DataPrivacy() {
     });
   }, []);
 
+  const DataPrivacyContent = useMemo(() => dummyData.map((item, i) =>
+    <DataPrivacyRow key={ i } role={ item.role } date={ item.date } pdf={ item.pdf }
+                    textContent={ item.content } notShowLine={ i === (dummyData.length - 1) }/>
+  ), [])
+
   return (
     <>
       <ButtonAddNew/>
       <div className="padding-top-15">
-        { dummyData.map((item, key) => <DataPrivacyRow key={ key } role={ item.role } date={ item.date }
-                                                          pdf={ item.pdf } textContent={ item.content }/>) }
+        { DataPrivacyContent }
       </div>
     </>
   )

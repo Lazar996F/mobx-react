@@ -55,11 +55,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function DataPrivacyRow() {
+function DataPrivacyRow({notShowLine}) {
   const classes = useStyles();
   return (
     <RowWrapper>
-      <CircleWithVerticalLine/>
+      <CircleWithVerticalLine notShowLine={notShowLine}/>
       <AccordionBox>
         <Accordion className={ classes.box }>
           <AccordionSummary
@@ -82,5 +82,4 @@ function DataPrivacyRow() {
     </RowWrapper>
   );
 }
-
 export default DataPrivacyRow;

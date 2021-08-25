@@ -7,7 +7,7 @@ import Context from './Context';
 import UserInfoBar from '../../Components/UserInfoBar';
 
 export const NavigationWrapper = styled.div`
-  padding-top: 64px;
+  padding-top: 74px;
   padding-left: 10px;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ export const NavigationWrapper = styled.div`
     text-decoration: none;
     padding-top: 20px;
     color: #959595;
-    font-size: 0.8em;
+    font-size: 0.78em;
   }
   a:focus{
     color: black;
