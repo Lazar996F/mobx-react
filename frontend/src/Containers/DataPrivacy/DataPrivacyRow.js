@@ -7,7 +7,7 @@ import ExpandedContent from './ExpandedContent';
 import CircleWithVerticalLine from '../../Components/CircleWithVerticalLine';
 import TimelineChip from '../../Components/Chip/TimelineChip';
 import Button from '../../Components/Button/Secondary';
-import  H3 from '../../Components/H3';
+import H3 from '../../Components/H3';
 
 export const RoleText = styled.div`
   flex: 2;
@@ -15,7 +15,7 @@ export const RoleText = styled.div`
   justify-content: center;
 `;
 
-export const ButtonWrapper = styled.div`
+export const ButtonColumn = styled.div`
   flex: 1;
   display: flex;
   justify-content: flex-end;
@@ -67,14 +67,14 @@ function DataPrivacyRow() {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <H3>Active from 15.11.2021</H3>
-            <TimelineChip/>
-            <RoleText>
-              <H3>Professional users, End user</H3>
-            </RoleText>
-            <ButtonWrapper>
-              <Button/>
-            </ButtonWrapper>
+              <H3>Active from 15.11.2021</H3>
+              <TimelineChip/>
+              <RoleText>
+                <H3>Professional users, End user</H3>
+              </RoleText>
+              <ButtonColumn>
+                <Button/>
+              </ButtonColumn>
           </AccordionSummary>
           <ExpandedContent/>
         </Accordion>

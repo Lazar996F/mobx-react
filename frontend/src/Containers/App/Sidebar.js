@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Logo from '../../Components/Logo';
 import {Wrapper} from '../../Components/Sidebar/Wrapper';
 import Context from './Context';
-
+import UserInfoBar from '../../Components/UserInfoBar';
 // Style for each individual link item
 export const LinkItem = styled.div`
   padding-top: 20px;
@@ -29,6 +29,7 @@ function SidebarContent() {
       <NavigationWrapper>
         { state.linkItems.map(item => <Link to={ item.to } key={ item.to }><LinkItem>{ item.title }</LinkItem></Link>) }
       </NavigationWrapper>
+      <UserInfoBar username={state.username}/>
     </Wrapper>
   );
 }

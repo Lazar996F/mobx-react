@@ -1,5 +1,5 @@
 import AccordionDetails from '@material-ui/core/AccordionDetails';
-import H3 from '../../../Components/H3';
+import H3 from '../../Components/H3';
 
 function ExpandedContent() {
   return (
