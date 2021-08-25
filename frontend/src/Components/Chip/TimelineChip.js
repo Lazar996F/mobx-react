@@ -5,6 +5,8 @@ import { Label } from './Label';
 export const Chip = styled.div`
   display: ${props => props['state']==='archive' && 'none'};
   padding: 0 6px;
+  width: 35px;
+  text-align: center;
   border-radius: 25px;
   background-color:${props => props['state']==='draft' ? 'inherit' : '#CF1F14'};
   color: ${props => props['state']=== 'draft' ? 'black' : 'white'};

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
  const RoleTextBox = styled.div`
-  flex: 2;
+  flex: 1;
   display: flex;
   justify-content: center;
 `;
- 
+
  export default RoleTextBox;

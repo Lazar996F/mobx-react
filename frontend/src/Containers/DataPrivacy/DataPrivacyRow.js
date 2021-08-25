@@ -17,7 +17,7 @@ function DataPrivacyRow({ notShowLine,role,date,pdf,textContent,state }) {
         <H3>Active from {date}</H3>
         <TimelineChip state={state}/>
         <RoleTextBox>
-          <H3>{role}</H3>
+            <H3>{role}</H3>
         </RoleTextBox>
         <ColumnButton>
           <Button/>
