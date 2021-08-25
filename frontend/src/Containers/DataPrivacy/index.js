@@ -15,9 +15,13 @@ function DataPrivacy() {
   }, []);
 
   const DataPrivacyContent = useMemo(() => dummyData.map((item, i) =>
-    <DataPrivacyRow key={ i } role={ item.role } date={ item.date } pdf={ item.pdf }
-                    textContent={ item.content } notShowLine={ i === (dummyData.length - 1) }/>
-  ), [])
+    <DataPrivacyRow key={ i }
+                    role={ item.role }
+                    date={ item.date }
+                    pdf={ item.pdf }
+                    textContent={ item.content }
+                    notShowLine={ i === (dummyData.length - 1) }/>
+  ), []);
 
   return (
     <>
@@ -26,7 +30,7 @@ function DataPrivacy() {
         { DataPrivacyContent }
       </div>
     </>
-  )
+  );
 }
 
 export default DataPrivacy;
