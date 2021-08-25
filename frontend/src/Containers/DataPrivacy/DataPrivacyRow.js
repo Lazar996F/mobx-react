@@ -1,85 +1,30 @@
-import styled from 'styled-components';
-import { makeStyles } from '@material-ui/core/styles';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import ExpandedContent from './ExpandedContent';
 import CircleWithVerticalLine from '../../Components/CircleWithVerticalLine';
 import TimelineChip from '../../Components/Chip/TimelineChip';
 import Button from '../../Components/Button/Secondary';
 import H3 from '../../Components/H3';
-import ArrowDownIcon from '../../Components/ArrowDown';
+import RoleTextBox from '../../Components/Accordion/RoleTextBox';
+import ColumnButton from '../../Components/Accordion/ColumnButton';
+import RowWrapper from '../../Components/Accordion/RowWrapper';
+import Accordion from '../../Components/Accordion';
+import ExpandedContent from './ExpandedContent';
 
-export const RoleText = styled.div`
-  flex: 2;
-  display: flex;
-  justify-content: center;
-`;
+function DataPrivacyRow({ notShowLine,role,date,pdf,textContent,state }) {
 
-export const ButtonColumn = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 8px;
-  max-height: 19px;
-  padding-right: 13px;
-`;
-
-export const RowWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  padding: 5px 0;
-`;
-
-export const AccordionBox = styled.div`
-  position: relative;
-  flex: 1;
-  line-height: 34px;
-
-  :before {
-    content: "";
-    position: absolute;
-    height: 0;
-    width: 0;
-    top: 20px;
-    left: -18px;
-    border-width: 9px;
-    border-color: transparent white transparent transparent;
-    border-style: solid;
-  }
-`;
-
-const useStyles = makeStyles((theme) => ({
-  box: {
-    boxShadow: 'none'
-  },
-}));
-
-function DataPrivacyRow({notShowLine}) {
-  const classes = useStyles();
   return (
     <RowWrapper>
-      <CircleWithVerticalLine notShowLine={notShowLine}/>
-      <AccordionBox>
-        <Accordion className={ classes.box }>
-          <AccordionSummary
-            expandIcon={ <ArrowDownIcon/> }
-            aria-controls="panel2a-content"
-            id="panel2a-header"
-          >
-              <H3>Active from 15.11.2021</H3>
-              <TimelineChip/>
-              <RoleText>
-                <H3>Professional users, End user</H3>
-              </RoleText>
-              <ButtonColumn>
-                <Button/>
-              </ButtonColumn>
-          </AccordionSummary>
-          <ExpandedContent/>
-        </Accordion>
-      </AccordionBox>
+      <CircleWithVerticalLine notShowLine={ notShowLine } state={state}/>
+      <Accordion expandedContent={() => ExpandedContent({textContent,pdf})}>
+        <H3>Active from {date}</H3>
+        <TimelineChip state={state}/>
+        <RoleTextBox>
+          <H3>{role}</H3>
+        </RoleTextBox>
+        <ColumnButton>
+          <Button/>
+        </ColumnButton>
+      </Accordion>
     </RowWrapper>
   );
 }
+
 export default DataPrivacyRow;

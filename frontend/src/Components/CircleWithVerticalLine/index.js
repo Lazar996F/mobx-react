@@ -2,10 +2,10 @@ import {VerticalLine} from './VerticalLine';
 import {Circle} from './Circle';
 import {Wrapper} from './Wrapper';
 
-function CircleWithVerticalLine({notShowLine}) {
+function CircleWithVerticalLine({notShowLine,state}) {
   return (
     <Wrapper>
-      <Circle/>
+      <Circle state={state}/>
       <VerticalLine notShowLine={notShowLine}/>
     </Wrapper>
   );

@@ -38,6 +38,7 @@ const initialState = {
   username: 'John Doe'
 }
 export const SET_TITLE = 'SET_TITLE';
+export const SET_POLICIES_DATA = 'SET_POLICIES_DATA';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -53,8 +54,6 @@ const reducer = (state, action) => {
 };
 
 export const AppProvider = (props) => {
-
-  // we need to add right an initial action
   const [ state, dispatch ] = useReducer(reducer, initialState);
 
   return (

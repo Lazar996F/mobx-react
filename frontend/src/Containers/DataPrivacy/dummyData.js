@@ -24,13 +24,15 @@ const dummyData = [
     role: 'End users',
     pdf: 'Data privacy_document.PDF',
     content: 'Lorem ipsum bla bla',
-    date: '10.12.2020'
+    date: '10.12.2020',
+    state: 'archive'
   },
   {
     role: 'Professional users, End users',
     pdf: 'Data privacy_document.PDF',
     content: 'Lorem ipsum bla bla',
-    date: '16.06.2020'
+    date: '16.06.2020',
+    state: 'archive'
   }
 ];
 
