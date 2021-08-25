@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
-import { MdExpandMore } from 'react-icons/md';
 import ExpandedContent from './ExpandedContent';
 import CircleWithVerticalLine from '../../Components/CircleWithVerticalLine';
 import TimelineChip from '../../Components/Chip/TimelineChip';
 import Button from '../../Components/Button/Secondary';
 import H3 from '../../Components/H3';
+import ArrowDownIcon from '../../Components/ArrowDown';
 
 export const RoleText = styled.div`
   flex: 2;
@@ -63,7 +63,7 @@ function DataPrivacyRow({notShowLine}) {
       <AccordionBox>
         <Accordion className={ classes.box }>
           <AccordionSummary
-            expandIcon={ <MdExpandMore/> }
+            expandIcon={ <ArrowDownIcon/> }
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
