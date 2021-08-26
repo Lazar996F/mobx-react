@@ -3,10 +3,13 @@ import Button from './Button';
 import Wrapper from './Wrapper';
 
 function TopMenu({label}) {
+  const onClick = () => {
+    console.log(">>>Klikno!!");
+  }
   return (
     <Wrapper>
         <H3>{label}</H3>
-      <Button/>
+      <Button onClick={onClick}/>
     </Wrapper>
   );
 }

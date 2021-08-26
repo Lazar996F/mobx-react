@@ -4,7 +4,6 @@ import DataPrivacyRow from './DataPrivacyRow';
 import DataPrivacyContext, { SET_POLICIES } from './Context';
 import dummyData from './dummyData';
 
-
 function Content() {
   const { state, dispatch } = useContext(DataPrivacyContext);
 
@@ -13,7 +12,7 @@ function Content() {
       type: SET_POLICIES,
       payload: dummyData
     });
-  }, [ state.policies ]);
+  }, [ state.policies,dispatch ]);
 
   const DataPrivacyContent = state.policies.map((item, i) =>
     <DataPrivacyRow

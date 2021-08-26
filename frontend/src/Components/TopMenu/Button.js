@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.button`
+export const WrapperButton = styled.button`
   border: none;
   background-color: inherit;
   :hover {
@@ -15,11 +15,11 @@ export const Wrapper = styled.button`
   margin-left: 10px;
 `;
 
-function Button() {
+function Button({onClick}) {
   return (
-    <Wrapper>
+    <WrapperButton onClick={onClick}>
       <img src={process.env.PUBLIC_URL + '/Icons/apps_menu_icon.svg'} alt="app_menu_icon"/>
-    </Wrapper>
+    </WrapperButton>
   );
 }
 
