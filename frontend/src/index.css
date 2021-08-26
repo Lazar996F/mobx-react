@@ -23,3 +23,7 @@ code {
 .padding-right-9 {
   padding-right: 9px;
 }
+
+.mr-auto {
+  margin-left: auto;
+}
