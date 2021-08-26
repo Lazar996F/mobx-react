@@ -1,18 +1,16 @@
-import { createContext, useEffect, useReducer } from 'react'
-import dummyData from './dummyData';
-import AppContext, { SET_TITLE } from '../App/Context';
+import { createContext, useReducer } from 'react'
 const DataPrivacyContext = createContext();
 
 const initialState = {
   policies: []
 }
 
-export const SET_DATA = 'SET_DATA';
+export const SET_POLICIES = 'SET_POLICIES';
 
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case SET_DATA:
+    case SET_POLICIES:
       return {
         ...state,
         policies: action.payload

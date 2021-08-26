@@ -1,7 +1,7 @@
 import ButtonAddNew from '../../Components/Button/Primary';
-import { useMemo, useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import DataPrivacyRow from './DataPrivacyRow';
-import DataPrivacyContext, { SET_DATA } from './Context';
+import DataPrivacyContext, { SET_POLICIES } from './Context';
 import dummyData from './dummyData';
 
 
@@ -10,7 +10,7 @@ function Content() {
 
   useEffect(() => {
     dispatch({
-      type: SET_DATA,
+      type: SET_POLICIES,
       payload: dummyData
     });
   }, [ state.policies ]);
