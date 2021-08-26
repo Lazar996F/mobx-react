@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const EndUser = styled.div`
+const ProfessionalUser = styled.div`
   background-image: url(${ process.env.PUBLIC_URL + '/Icons/user_standard_icon.svg' });
   background-repeat: no-repeat;
   width: 16px;
@@ -8,4 +8,4 @@ const EndUser = styled.div`
   margin: 0 10px;
 `;
 
-export default EndUser;
+export default ProfessionalUser;

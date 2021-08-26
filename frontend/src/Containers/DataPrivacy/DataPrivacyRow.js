@@ -9,6 +9,9 @@ import Accordion from '../../Components/Accordion';
 import ExpandedContent from './ExpandedContent';
 import ActiveInfoColumn from '../../Components/Accordion/ActiveInfoColumn';
 import EndUser from '../../Components/Icons/EndUser';
+import ProfessionalUser from '../../Components/Icons/ProfessionalUser';
+import Tooltip from '../../Components/Tooltip';
+
 function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
 
   return (
@@ -20,7 +23,7 @@ function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
           <TimelineChip state={ state }/>
         </ActiveInfoColumn>
         <RoleTextColumn>
-          {state==='current' ? <EndUser/> : <H3>{ role }</H3> }
+          {state==='current' ? <><Tooltip title="Professional user"><ProfessionalUser/></Tooltip><Tooltip title="End user"><EndUser/></Tooltip></>: <H3>{ role }</H3> }
         </RoleTextColumn>
         <ColumnButton>
           <Button/>

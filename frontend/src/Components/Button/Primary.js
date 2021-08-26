@@ -11,8 +11,9 @@ export const Button = styled.button`
   cursor: pointer;
   color: #ffff;
   font-family: Arial, sans-serif;
-  font-size: 0.8em;
-  padding: 10px 25px;
+  font-size: 16px;
+  width: 224px;
+  height: 40px;
   text-decoration: none;
   border: 0;
 `;

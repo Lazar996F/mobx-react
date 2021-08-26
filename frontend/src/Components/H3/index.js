@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const H3 = styled.h3`
-  font-size: 0.77em;
+  font-size: 14px;
   font-family: 'Nunito', sans-serif;
   margin-bottom: 0;
   margin-top: 2px;

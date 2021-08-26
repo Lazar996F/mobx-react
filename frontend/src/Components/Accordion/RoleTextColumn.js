@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
  const RoleTextColumn = styled.div`
-  flex: 1;
-  justify-content: start;
+   text-align: start;
    display: flex;
    align-items: center;
 `;
