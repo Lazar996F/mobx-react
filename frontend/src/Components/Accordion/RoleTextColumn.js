@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
- const RoleTextColumn = styled.div`
+ const RoleColumn = styled.div`
    text-align: start;
    display: flex;
    align-items: center;
+   width:40%;
 `;
 
- export default RoleTextColumn;
+ export default RoleColumn;
