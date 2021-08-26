@@ -11,6 +11,7 @@ import { Wrapper } from '../../Components/Layout/Wrapper';
 import PageTitle from './PageTitle';
 import { AppProvider } from './Context';
 import TopMenu from '../../Components/TopMenu';
+import Footer from '../../Components/Footer';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           </ContentBox>
         </BrowserRouter>
       </Wrapper>
+      <Footer/>
     </AppProvider>
   );
 }
