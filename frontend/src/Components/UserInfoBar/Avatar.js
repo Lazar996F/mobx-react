@@ -4,10 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(() => ({
   root: {
     backgroundColor: 'black',
-    width: '30px',
-    height: '30px',
+    width: '32px',
+    height: '32px',
     lineHeight: '0',
-    fontSize: '0.8em'
+    fontSize: '14px',
+    letterSpacing: '0',
+    textAlign: 'center'
   },
 }));
 

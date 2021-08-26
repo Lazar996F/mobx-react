@@ -35,10 +35,9 @@ const initialState = {
   ],
   title: '',
   subtitle: '',
-  username: 'John Doe'
+  username: 'Katie Baxendale'
 }
 export const SET_TITLE = 'SET_TITLE';
-export const SET_POLICIES_DATA = 'SET_POLICIES_DATA';
 
 const reducer = (state, action) => {
   switch (action.type) {

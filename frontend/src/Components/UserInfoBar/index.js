@@ -4,11 +4,10 @@ import H3 from '../H3';
 
 const Wrapper = styled.div`
   margin-top: auto;
-  margin-bottom: 20px;
+  padding-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-right: 30px;
 `;
 
 const getInitials = (name) => {
