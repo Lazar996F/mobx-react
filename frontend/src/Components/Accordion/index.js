@@ -5,9 +5,9 @@ import AccordionMUI from '@material-ui/core/Accordion';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
-  box: {
+  accord: {
     boxShadow: 'none'
-  },
+  }
 }));
 
 function Accordion(props) {
@@ -15,7 +15,7 @@ function Accordion(props) {
   const classes = useStyles();
   return (
     <AccordionWrapper>
-      <AccordionMUI className={ classes.box }>
+      <AccordionMUI className={ classes.accord}>
         <AccordionSummary
           expandIcon={ <ArrowDownIcon/> }
           aria-controls="panel2a-content"
