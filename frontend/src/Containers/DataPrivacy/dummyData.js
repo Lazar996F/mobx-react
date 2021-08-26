@@ -1,13 +1,13 @@
 const dummyData = [
   {
-    role: 'Professional users, End users',
+    role: 'Professional users,End users',
     pdf: 'Data privacy_document.PDF',
     content: 'Lorem ipsum bla bla',
     date: '15.11.2021',
     state: 'draft'
   },
   {
-    role: 'Professional users, End users',
+    role: 'Professional users,End users',
     pdf: 'Data privacy_document.PDF',
     content: 'Lorem ipsum bla bla',
     date: '09.07.2021',
@@ -28,7 +28,7 @@ const dummyData = [
     state: 'archive'
   },
   {
-    role: 'Professional users, End users',
+    role: 'Professional users,End users',
     pdf: 'Data privacy_document.PDF',
     content: 'Lorem ipsum bla bla',
     date: '16.06.2020',

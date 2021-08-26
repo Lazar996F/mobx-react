@@ -8,8 +8,7 @@ import RowWrapper from '../../Components/Accordion/RowWrapper';
 import Accordion from '../../Components/Accordion';
 import ExpandedContent from './ExpandedContent';
 import ActiveInfoColumn from '../../Components/Accordion/ActiveInfoColumn';
-import Tooltip from '../../Components/Tooltip';
-import UserRoleIcon from '../../Components/UserRoleIcon';
+import UserRoleView from '../../Components/UserRoleView';
 
 function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
 
@@ -22,7 +21,7 @@ function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
           <TimelineChip state={ state }/>
         </ActiveInfoColumn>
         <RoleColumn>
-          <Tooltip title={role}><UserRoleIcon role={role}/></Tooltip>
+          <UserRoleView role={role}/>
         </RoleColumn>
         <ColumnButton>
           <Button/>
