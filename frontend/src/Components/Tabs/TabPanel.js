@@ -1,5 +1,10 @@
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import styled from 'styled-components';
+import {BACKGROUND_COLOR_SECONDARY} from '../../Utils/styles';
+
+const Box = styled.div`
+  background-color: ${BACKGROUND_COLOR_SECONDARY};
+`;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

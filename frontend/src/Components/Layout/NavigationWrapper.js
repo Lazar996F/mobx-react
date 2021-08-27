@@ -11,9 +11,5 @@ import styled from 'styled-components';
     color: #959595;
     font-size: 0.78em;
   }
-  a:focus{
-    color: black;
-    font-weight: bold;
-  }
 `;
 export default NavigationWrapper;

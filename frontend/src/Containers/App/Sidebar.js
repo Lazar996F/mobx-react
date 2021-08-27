@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Logo from '../../Components/Logo';
 import { Wrapper } from '../../Components/Sidebar/Wrapper';
 import Context from './Context';
@@ -13,8 +13,17 @@ function SidebarContent() {
     <Wrapper>
       <Logo/>
       <NavigationWrapper>
-        { state.linkItems.map(item => <Link to={ item.to } key={ item.to }
-                                            className="a-focus-color">{ item.title }</Link>) }
+        { state.linkItems.map(item =>
+          <NavLink
+            to={ item.to }
+            key={ item.to }
+            activeStyle={{
+              fontWeight: "bold",
+              color: "black"
+            }}
+        >
+          { item.title }
+        </NavLink>) }
       </NavigationWrapper>
       <UserInfoBar username={ state.username }/>
     </Wrapper>
