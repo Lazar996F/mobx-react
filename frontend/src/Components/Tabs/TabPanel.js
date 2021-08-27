@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import {BACKGROUND_COLOR_SECONDARY} from '../../Utils/styles';
 
 const Box = styled.div`
-  background-color: ${BACKGROUND_COLOR_SECONDARY};
+  background-color: #F8F8F8;
+  padding-top: 5px;
+  padding-left: 15px;
 `;
 
 function TabPanel(props) {

@@ -27,3 +27,19 @@ code {
 .mr-auto {
   margin-left: auto;
 }
+
+.test-color {
+  color: pink;
+}
+.test-color-1 {
+  color: #fff;
+}
+
+.test-color-2 {
+  color: green;
+}
+
+.test-color-3 {
+  color: blue;
+}
+

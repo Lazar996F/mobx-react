@@ -3,6 +3,7 @@ import TabsMUI from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { makeStyles } from '@material-ui/core/styles';
 import TabPanel from './TabPanel';
+import H4 from '../H4';
 
 const a11yProps = (index) => {
   return {
@@ -51,7 +52,10 @@ function Tabs() {
         <Tab label="Italiano" {...a11yProps(3)} className={classes.tabLabel}/>
       </TabsMUI>
       <TabPanel value={value} index={0}>
+        <H4>Changes:</H4>
+        <H4>Wiser by Feller:</H4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ad aliquam dicta eius enim expedita facilis id ipsum iste iure nemo nostrum, numquam pariatur praesentium quam quo repellat repellendus sapiente tenetur unde ut vitae voluptas voluptates? Animi eos illum laboriosam magni maxime minus, molestiae quisquam? Et hic id molestiae nam?</p>
+        <a href="#" download>Data privacy_document.PDF</a>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ad aliquam dicta eius enim expedita facilis id ipsum iste iure nemo nostrum, numquam pariatur praesentium quam quo repellat repellendus sapiente tenetur unde ut vitae voluptas voluptates? Animi eos illum laboriosam magni maxime minus, molestiae quisquam? Et hic id molestiae nam?</p>
