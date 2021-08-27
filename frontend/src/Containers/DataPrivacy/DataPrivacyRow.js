@@ -6,7 +6,7 @@ import RoleColumn from '../../Components/Accordion/RoleTextColumn';
 import ColumnButton from '../../Components/Accordion/ColumnButton';
 import RowWrapper from '../../Components/Accordion/RowWrapper';
 import Accordion from '../../Components/Accordion';
-import ExpandedContent from './ExpandedContent';
+import ExpandedContent from '../../Components/Accordion/ExpandedContent';
 import ActiveInfoColumn from '../../Components/Accordion/ActiveInfoColumn';
 import UserRoleView from '../../Components/UserRoleView';
 
@@ -15,7 +15,7 @@ function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
   return (
     <RowWrapper>
       <CircleWithVerticalLine notShowLine={ notShowLine } state={ state }/>
-      <Accordion expandedContent={ () => ExpandedContent({ textContent, pdf }) }>
+      <Accordion expandedContent={ () => ExpandedContent({ textContent, pdf,date }) }>
         <ActiveInfoColumn>
             <H3>Active from { date }</H3>
           <TimelineChip state={ state }/>

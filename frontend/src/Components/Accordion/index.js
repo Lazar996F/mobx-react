@@ -7,6 +7,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(() => ({
   accord: {
     boxShadow: 'none'
+  },
+  summary: {
+    minHeight: '0!important',
+    height: '62px'
   }
 }));
 
@@ -20,6 +24,7 @@ function Accordion(props) {
           expandIcon={ <ArrowDownIcon/> }
           aria-controls="panel2a-content"
           id="panel2a-header"
+          className={classes.summary}
         >
           {props.children}
         </AccordionSummary>

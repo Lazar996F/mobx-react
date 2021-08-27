@@ -9,7 +9,7 @@ function PageTitle() {
   return (
     <div className="padding-left-15">
       <H1>{ state?.title }</H1>
-      <H2>{ state?.subtitle }</H2>
+      <H2 secondary>{ state?.subtitle }</H2>
     </div>
   );
 }
