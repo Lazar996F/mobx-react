@@ -4,6 +4,7 @@ const Wrapper = styled.button`
   cursor: pointer;
   border: 0;
   padding-top: 5px;
+  width: 74px;
   :hover {
     background-color: #E3E3E3;
     border-radius: 7%;
