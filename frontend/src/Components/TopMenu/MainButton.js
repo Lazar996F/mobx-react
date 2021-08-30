@@ -15,7 +15,7 @@ export const WrapperButton = styled.button`
   margin-left: 10px;
 `;
 
-function Main({onClick}) {
+function MainButton({onClick}) {
   return (
     <WrapperButton onClick={onClick}>
       <img src={process.env.PUBLIC_URL + '/icons/apps_menu_icon.svg'} alt="app_menu_icon"/>
@@ -23,4 +23,4 @@ function Main({onClick}) {
   );
 }
 
-export default Main;
+export default MainButton;

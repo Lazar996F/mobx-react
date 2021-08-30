@@ -1,30 +1,34 @@
 import styled from 'styled-components';
-import Account from './Buttons/Account';
-import Portal from './Buttons/Portal';
-import Disposuite from './Buttons/Disposuite';
+import IconButton from '../Button/Icon';
 
-const Content = styled.div`
+const IconsWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: normal;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
   overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px #000000;
   z-index: 1;
   top: 56px;
   right: 37px;
-  justify-content: space-evenly;
   width: 299px;
   padding: 28px 0px;
+  >* {
+    flex: 0 0 33.3333%;
+    margin: 6px 0;
+  }
 `;
 
-function MenuContent() {
+function MenuContent({menuButtonsLabels}) {
+
+  const IconButtonsView = menuButtonsLabels.map(item => <IconButton src={item.src} title={item.title}/>)
+
   return (
-    <Content>
-      <Account/>
-      <Portal/>
-      <Disposuite/>
-    </Content>
+    <IconsWrapper>
+      {IconButtonsView}
+    </IconsWrapper>
   );
 }
 

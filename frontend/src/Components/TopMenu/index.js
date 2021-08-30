@@ -1,10 +1,10 @@
 import {useState} from 'react';
 import H3 from '../../Components/H3';
-import Button from './Buttons/Main';
+import Button from './MainButton';
 import Wrapper from './Wrapper';
 import MenuContent from './MenuContent';
 
-function TopMenu({label}) {
+function TopMenu({label,menuButtonsLabels}) {
   const [open,setOpen] = useState(false);
 
   const onClick = () => {
@@ -16,7 +16,7 @@ function TopMenu({label}) {
     <Wrapper>
         <H3>{label}</H3>
       <Button onClick={onClick}/>
-      {open && <MenuContent/>}
+      {open && <MenuContent menuButtonsLabels={menuButtonsLabels}/>}
     </Wrapper>
     </>
   );
