@@ -1,16 +1,14 @@
 import { useContext, useEffect } from 'react';
-
 import Context, { SET_TITLE_SUBTITLE } from '../App/Context';
 
-function Dashboard() {
+function AddNewDataPrivacy() {
   const { dispatch } = useContext(Context);
-
   useEffect(() => {
     dispatch({
       type: SET_TITLE_SUBTITLE,
       payload: {
-        title: 'Dashboard',
-        subtitle: 'Active and archive Data Privacy records'
+        title: 'Add new Data Privacy',
+        subtitle: 'New version of the Data Privacy for all users'
       }
     });
   }, [dispatch]);
@@ -21,4 +19,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard;
+export default AddNewDataPrivacy;

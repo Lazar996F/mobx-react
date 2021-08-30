@@ -1,6 +1,6 @@
 import DataPrivacy from '../Containers/DataPrivacy';
 import Dashboard from '../Containers/Dashboard';
-
+import AddNewDataPrivacy from '../Containers/AddNewDataPrivacy';
 const routes = [
   {
     path: '/privacy',
@@ -11,6 +11,11 @@ const routes = [
     path: '/dashboard',
     exact: true,
     component: Dashboard
+  },
+  {
+    path: '/privacy/create',
+    exact: false,
+    component: AddNewDataPrivacy
   }
 ]
 

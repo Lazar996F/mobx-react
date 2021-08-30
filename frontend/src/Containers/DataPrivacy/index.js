@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-import AppContext, { SET_TITLE } from '../App/Context';
+import AppContext, { SET_TITLE_SUBTITLE } from '../App/Context';
 import Content from './Content';
 import { DataPrivacyProvider } from './Context';
 
@@ -8,8 +8,11 @@ function DataPrivacy() {
 
   useEffect(() => {
     dispatch({
-      'type': SET_TITLE,
-      'payload': 'Data Privacy'
+      'type': SET_TITLE_SUBTITLE,
+      payload: {
+        title: 'Data Privacy',
+        subtitle: 'Active and archive Data Privacy records'
+      }
     });
   }, [dispatch]);
 

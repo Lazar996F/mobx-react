@@ -9,11 +9,11 @@ const IconsWrapper = styled.div`
   background-color: #f1f1f1;
   min-width: 160px;
   overflow: auto;
-  box-shadow: 0px 8px 16px 0px #000000;
+  box-shadow: 0px 3px 6px #00000029;
   z-index: 1;
   top: 56px;
   right: 37px;
-  width: 299px;
+  width: 320px;
   padding: 28px 0px;
   >* {
     flex: 0 0 33.3333%;

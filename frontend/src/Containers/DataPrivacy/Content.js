@@ -25,7 +25,7 @@ function Content() {
       notShowLine={ i === (state.policies.length - 1) }/>)
   return (
     <>
-      <ButtonAddNew/>
+      <ButtonAddNew linkTo="privacy/create" label="Add new Data Privacy"/>
       <div className="padding-top-15">
         { DataPrivacyContent }
       </div>

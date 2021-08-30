@@ -51,7 +51,7 @@ const initialState = {
     },
     {
       src: '/icons/esetup.png',
-      title: 'Esetup'
+      title: 'eSetup'
     },
     {
       src: '/icons/wiserhome.png',
@@ -59,15 +59,15 @@ const initialState = {
     }
   ]
 }
-export const SET_TITLE = 'SET_TITLE';
+export const SET_TITLE_SUBTITLE = 'SET_TITLE_SUBTITLE';
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case SET_TITLE:
+    case SET_TITLE_SUBTITLE:
       return {
         ...state,
-        title: action.payload,
-        subtitle: 'Active and archive Data Privacy records'
+        title: action.payload.title,
+        subtitle: action.payload.subtitle
       }
     default:
       return;

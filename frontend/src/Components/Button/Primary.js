@@ -5,7 +5,7 @@ export const ButtonWrapper = styled.div`
   flex-direction: row-reverse;
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   background-color: black;
   display: inline-block;
   cursor: pointer;
@@ -13,15 +13,16 @@ export const Button = styled.button`
   font-family: Arial, sans-serif;
   font-size: 16px;
   width: 224px;
-  height: 40px;
+  padding: 13px 0px;
   text-decoration: none;
   border: 0;
+  text-align: center;
 `;
 
-function Primary() {
+function Primary({linkTo,label}) {
   return (
     <ButtonWrapper>
-      <Button>Add new Data Privacy</Button>
+      <Button href={linkTo}>{label}</Button>
     </ButtonWrapper>
   );
 }
