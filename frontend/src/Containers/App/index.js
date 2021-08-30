@@ -14,28 +14,6 @@ import TopMenu from '../../Components/TopMenu';
 import Footer from '../../Components/Footer';
 
 function App() {
-  const menuButtonsLabels = [
-    {
-      src: '/icons/account_icon.svg',
-      title: 'Account'
-    },
-    {
-      src: '/icons/portal.svg',
-      title: 'Portal'
-    },
-    {
-      src: '/icons/dispo.svg',
-      title: 'Disposuite'
-    },
-    {
-      src: '/icons/esetup.png',
-      title: 'Esetup'
-    },
-    {
-      src: '/icons/wiserhome.png',
-      title: 'Wiser Home'
-    }
-  ]
 
   return (
     <AppProvider>
@@ -43,7 +21,7 @@ function App() {
         <BrowserRouter>
             <Sidebar/>
           <ContentBox>
-            <TopMenu label="Lorem Management Portal - Super Admin" menuButtonsLabels={menuButtonsLabels}/>
+            <TopMenu label="Lorem Management Portal - Super Admin"/>
             <PageTitle />
             <Switch>
               { routes.map((route, key) => (

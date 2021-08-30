@@ -35,7 +35,29 @@ const initialState = {
   ],
   title: '',
   subtitle: '',
-  username: 'Katie Baxendale'
+  username: 'Katie Baxendale',
+   menuButtonsLabels: [
+    {
+      src: '/icons/account_icon.svg',
+      title: 'Account'
+    },
+    {
+      src: '/icons/portal.svg',
+      title: 'Portal'
+    },
+    {
+      src: '/icons/dispo.svg',
+      title: 'Disposuite'
+    },
+    {
+      src: '/icons/esetup.png',
+      title: 'Esetup'
+    },
+    {
+      src: '/icons/wiserhome.png',
+      title: 'Wiser Home'
+    }
+  ]
 }
 export const SET_TITLE = 'SET_TITLE';
 
