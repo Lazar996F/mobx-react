@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {COLOR_SECONDARY_LIGHT} from '../../Utils/styles';
+import { COLOR_SECONDARY_LIGHT } from '../../Utils/styles';
 
 const Input = styled.input`
   padding: 8px;
@@ -7,8 +7,8 @@ const Input = styled.input`
   background-color: #FFFFFF;
   color: #000000;
   border: 0;
-  border-bottom: 1px solid ${COLOR_SECONDARY_LIGHT};
-  width: 100%;
+  border-bottom: 1px solid ${ COLOR_SECONDARY_LIGHT };
+
   :focus {
     outline: none;
   }
@@ -16,7 +16,9 @@ const Input = styled.input`
 
 function TitleInput() {
   return (
-    <Input/>
+    <>
+      <Input/>
+    </>
   );
 }
 

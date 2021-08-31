@@ -1,6 +1,5 @@
 import { useContext, useEffect } from 'react';
 import Context, { SET_TITLE_SUBTITLE } from '../App/Context';
-import { Wrapper } from '../../Components/Layout/AddNewDataPrivacyWrapper';
 import FormGroup from '../../Components/FormGroup';
 
 function AddNewDataPrivacy() {
@@ -17,9 +16,9 @@ function AddNewDataPrivacy() {
   }, [ dispatch ]);
 
   return (
-    <Wrapper>
+    <>
       <FormGroup/>
-    </Wrapper>
+    </>
   )
 }
 

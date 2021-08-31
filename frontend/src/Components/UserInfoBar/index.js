@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Avatar from './Avatar';
 import H3 from '../H3';
+import {getInitials} from '../../Utils/helpers';
 
 const Wrapper = styled.div`
   margin-top: auto;
@@ -9,18 +10,6 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
 `;
-
-const getInitials = (name) => {
-  let initials = name.split(' ');
-
-  if(initials.length > 1) {
-    initials = initials.shift().charAt(0) + initials.pop().charAt(0);
-  } else {
-    initials = name.substring(0, 2);
-  }
-
-  return initials.toUpperCase();
-}
 
 function UserInfoBar({username}) {
   const initials = getInitials(username);
