@@ -2,6 +2,7 @@ import TitleInput from './TitleInput';
 import UsersTypeSelect from './UsersTypeSelect';
 import ActiveDateInput from './ActiveDateInput';
 import styled from 'styled-components';
+import Tabs from '../Tabs';
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ function FormGroup() {
           <UsersTypeSelect/>
           <ActiveDateInput/>
         </div>
+      <Tabs tabContent={() => <>Hello</>}/>
     </Wrapper>
   );
 }

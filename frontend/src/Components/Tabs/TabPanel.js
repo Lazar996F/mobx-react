@@ -18,7 +18,7 @@ function TabPanel(props) {
     >
       { value === index && (
         <Box>
-          { children }
+         { children }
         </Box>
       ) }
     </div>

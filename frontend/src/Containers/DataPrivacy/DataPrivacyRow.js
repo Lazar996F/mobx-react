@@ -9,13 +9,25 @@ import Accordion from '../../Components/Accordion';
 import ExpandedContent from '../../Components/Accordion/ExpandedContent';
 import ActiveInfoColumn from '../../Components/Accordion/ActiveInfoColumn';
 import UserRoleView from '../../Components/UserRoleView';
+import P from '../../Components/P';
+import DownloadPdf from '../../Components/DownloadPdf';
+import React from 'react';
 
 function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
+
+  const tabContent = () => (
+    <div className="line-height-normal">
+      <H3>Changes:</H3>
+      <H3>Wiser by Feller:</H3>
+      <P>{textContent}</P>
+      <DownloadPdf/>
+    </div>
+  )
 
   return (
     <RowWrapper>
       <CircleWithVerticalLine notShowLine={ notShowLine } state={ state }/>
-      <Accordion expandedContent={ () => ExpandedContent({ textContent, pdf,date }) }>
+      <Accordion expandedContent={ () => ExpandedContent({ tabContent, pdf,date }) }>
         <ActiveInfoColumn>
             <H3>Active from { date }</H3>
           <TimelineChip state={ state }/>

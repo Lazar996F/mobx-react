@@ -2,7 +2,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import { makeStyles } from '@material-ui/core/styles';
 import H3 from '../H3';
 import LanguageTabs from '../Tabs';
-import P from '../P';
+import React from 'react';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -11,10 +11,8 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function ExpandedContent({ date, textContent }) {
+function ExpandedContent({ date, tabContent }) {
   const classes = useStyles();
-
-  const tabContent = () => <P>{textContent}</P>
 
   return (
     <AccordionDetails className={ classes.root }>

@@ -3,8 +3,6 @@ import TabsMUI from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { makeStyles } from '@material-ui/core/styles';
 import TabPanel from './TabPanel';
-import H3 from '../H3';
-import DownloadPdf from '../DownloadPdf';
 
 const a11yProps = (index) => {
   return {
@@ -19,8 +17,7 @@ const useStyles = makeStyles(() => ({
     boxShadow: 'none'
   },
   tabsMenu: {
-    backgroundColor: '#fff',
-    maxWidth: '50%'
+    backgroundColor: '#fff'
   },
   tabLabel: {
     textTransform: 'none',
@@ -55,28 +52,16 @@ function Tabs({ tabContent }) {
         <Tab label="Italiano" { ...a11yProps(3) } className={ classes.tabLabel }/>
       </TabsMUI>
       <TabPanel value={ value } index={ 0 }>
-        <H3>Changes:</H3>
-        <H3>Wiser by Feller:</H3>
         { TabContent }
-        <DownloadPdf/>
       </TabPanel>
       <TabPanel value={ value } index={ 1 }>
-        <H3>Changes:</H3>
-        <H3>Wiser by Feller:</H3>
         { TabContent }
-        <DownloadPdf/>
       </TabPanel>
       <TabPanel value={ value } index={ 2 }>
-        <H3>Changes:</H3>
-        <H3>Wiser by Feller:</H3>
         { TabContent }
-        <DownloadPdf/>
       </TabPanel>
       <TabPanel value={ value } index={ 3 }>
-        <H3>Changes:</H3>
-        <H3>Wiser by Feller:</H3>
         { TabContent }
-        <DownloadPdf/>
       </TabPanel>
     </div>
   );
