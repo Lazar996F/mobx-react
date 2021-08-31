@@ -1,6 +1,4 @@
-import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
-import { BACKGROUND_COLOR_SECONDARY } from '../../Utils/styles';
 
 const Box = styled.div`
   background-color: #F8F8F8;
@@ -20,7 +18,7 @@ function TabPanel(props) {
     >
       { value === index && (
         <Box>
-          <Typography>{ children }</Typography>
+          { children }
         </Box>
       ) }
     </div>

@@ -9,9 +9,14 @@ const Input = styled.input`
   background-color: #FFFFFF;
   color: #000000;
   border: 0;
-  border-bottom: 1px solid ${COLOR_SECONDARY_LIGHT};
+  border-bottom: 1px solid ${ COLOR_SECONDARY_LIGHT };
+
   :focus {
     outline: none;
+  }
+
+  ::placeholder {
+    font-size: 14px;
   }
 `;
 
@@ -20,11 +25,29 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
+const CloseIcon = styled.button`
+  width: 34px;
+  height: 38px;
+  background-image: url(${ process.env.PUBLIC_URL + '/icons/close_icon.svg' });
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+`;
+
+const InputWrapper = styled.div`
+  position: relative;
+`;
+
 function ActiveDateInput() {
   return (
     <Wrapper>
       <H3 light>Active from</H3>
-      <Input/>
+      <InputWrapper>
+        <Input placeholder="DD/MM/YYYY"/>
+        <CloseIcon/>
+      </InputWrapper>
     </Wrapper>
   );
 }

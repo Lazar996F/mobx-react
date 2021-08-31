@@ -5,7 +5,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import TabPanel from './TabPanel';
 import H3 from '../H3';
 import DownloadPdf from '../DownloadPdf';
-import P from '../P';
 
 const a11yProps = (index) => {
   return {
@@ -30,9 +29,11 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function Tabs() {
+function Tabs({ tabContent }) {
   const classes = useStyles();
   const [ value, setValue ] = React.useState(0);
+
+  const TabContent = tabContent();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -56,40 +57,27 @@ function Tabs() {
       <TabPanel value={ value } index={ 0 }>
         <H3>Changes:</H3>
         <H3>Wiser by Feller:</H3>
-        <P>English ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et.</P>
+        { TabContent }
         <DownloadPdf/>
       </TabPanel>
       <TabPanel value={ value } index={ 1 }>
         <H3>Changes:</H3>
         <H3>Wiser by Feller:</H3>
-        <P>Deutsch ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et.</P>
-        <DownloadPdf/> </TabPanel>
+        { TabContent }
+        <DownloadPdf/>
+      </TabPanel>
       <TabPanel value={ value } index={ 2 }>
         <H3>Changes:</H3>
         <H3>Wiser by Feller:</H3>
-        <P>Francais ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et.</P>
-        <DownloadPdf/> </TabPanel>
+        { TabContent }
+        <DownloadPdf/>
+      </TabPanel>
       <TabPanel value={ value } index={ 3 }>
         <H3>Changes:</H3>
         <H3>Wiser by Feller:</H3>
-        <P>Italiano ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et.</P>
-        <DownloadPdf/> </TabPanel>
+        { TabContent }
+        <DownloadPdf/>
+      </TabPanel>
     </div>
   );
 }

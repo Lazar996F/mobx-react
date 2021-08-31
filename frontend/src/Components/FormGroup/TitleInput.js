@@ -12,12 +12,16 @@ const Input = styled.input`
   :focus {
     outline: none;
   }
+
+  ::placeholder{
+    color: black;
+  }
 `;
 
 function TitleInput() {
   return (
     <>
-      <Input/>
+      <Input placeholder="Title (optional)"/>
     </>
   );
 }
