@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react';
+
 import AppContext, { SET_TITLE_SUBTITLE } from '../App/Context';
 import Content from './Content';
 import { DataPrivacyProvider } from './Context';
@@ -14,7 +15,8 @@ function DataPrivacy() {
         subtitle: 'Active and archive Data Privacy records'
       }
     });
-  }, [dispatch]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <DataPrivacyProvider>

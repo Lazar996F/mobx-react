@@ -1,5 +1,6 @@
-import ButtonAddNew from '../../Components/Button/Primary';
 import { useEffect, useContext } from 'react';
+
+import ButtonAddNew from '../../Components/Button/Primary';
 import DataPrivacyRow from './DataPrivacyRow';
 import DataPrivacyContext, { SET_POLICIES } from './Context';
 import dummyData from './dummyData';
@@ -12,7 +13,8 @@ function Content() {
       type: SET_POLICIES,
       payload: dummyData
     });
-  }, [ state.policies,dispatch ]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ state.policies ]);
 
   const DataPrivacyContent = state.policies.map((item, i) =>
     <DataPrivacyRow

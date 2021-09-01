@@ -27,7 +27,7 @@ function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
   return (
     <RowWrapper>
       <CircleWithVerticalLine notShowLine={ notShowLine } state={ state }/>
-      <Accordion expandedContent={ () => ExpandedContent({ tabContent, pdf,date }) }>
+      <Accordion expandedContent={ () => ExpandedContent({ tabContent, pdf, date }) }>
         <ActiveInfoColumn>
             <H3>Active from { date }</H3>
           <TimelineChip state={ state }/>

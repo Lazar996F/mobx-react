@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import IconButton from '../Button/Icon';
 
 const IconsWrapper = styled.div`
@@ -9,13 +10,14 @@ const IconsWrapper = styled.div`
   background-color: #f1f1f1;
   min-width: 160px;
   overflow: auto;
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0 3px 6px #00000029;
   z-index: 1;
   top: 56px;
   right: 37px;
   width: 320px;
-  padding: 28px 0px;
-  >* {
+  padding: 0;
+
+  > * {
     flex: 0 0 33.3333%;
     margin: 6px 0;
   }
