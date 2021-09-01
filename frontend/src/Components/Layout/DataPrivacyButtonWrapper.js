@@ -1,0 +1,8 @@
+import styled from 'styled-components';
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+`;
+
+export default ButtonWrapper;

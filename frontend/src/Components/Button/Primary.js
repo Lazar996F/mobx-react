@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-export const ButtonWrapper = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-`;
-
 export const Button = styled.a`
   background-color: black;
   display: inline-block;
@@ -21,9 +16,9 @@ export const Button = styled.a`
 
 function Primary({linkTo,label}) {
   return (
-    <ButtonWrapper>
+    <>
       <Button href={linkTo}>{label}</Button>
-    </ButtonWrapper>
+    </>
   );
 }
 

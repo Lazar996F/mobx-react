@@ -1,6 +1,10 @@
 import { useContext, useEffect } from 'react';
+
 import Context, { SET_TITLE_SUBTITLE } from '../App/Context';
 import FormGroup from '../../Components/FormGroup';
+import Button from '../../Components/Button/Primary';
+import Link from '../../Components/Link';
+import Wrapper from '../../Components/Layout/NewDataPrivacyPageWrapper';
 
 function AddNewDataPrivacy() {
   const { dispatch } = useContext(Context);
@@ -17,9 +21,13 @@ function AddNewDataPrivacy() {
   }, []);
 
   return (
-    <>
+    <Wrapper>
       <FormGroup/>
-    </>
+      <div className="flex-content-between">
+      <Button label="Create Data Privacy"/>
+        <Link linkTo="/privacy" title="Go back to Data Privacy"/>
+      </div>
+    </Wrapper>
   )
 }
 
