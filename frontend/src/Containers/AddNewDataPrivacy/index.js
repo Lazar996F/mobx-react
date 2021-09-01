@@ -1,7 +1,6 @@
 import { useContext, useEffect } from 'react';
 import Context, { SET_TITLE_SUBTITLE } from '../App/Context';
 import FormGroup from '../../Components/FormGroup';
-import Button from '../../Components/Button/Primary';
 
 function AddNewDataPrivacy() {
   const { dispatch } = useContext(Context);

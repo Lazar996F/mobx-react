@@ -19,7 +19,7 @@ function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
     <div className="line-height-normal">
       <H3>Changes:</H3>
       <H3>Wiser by Feller:</H3>
-      <P>{textContent}</P>
+      <P>{ textContent }</P>
       <DownloadPdf/>
     </div>
   )
@@ -29,11 +29,11 @@ function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
       <CircleWithVerticalLine notShowLine={ notShowLine } state={ state }/>
       <Accordion expandedContent={ () => ExpandedContent({ tabContent, pdf, date }) }>
         <ActiveInfoColumn>
-            <H3>Active from { date }</H3>
+          <H3>Active from { date }</H3>
           <TimelineChip state={ state }/>
         </ActiveInfoColumn>
         <RoleColumn>
-          <UserRoleView role={role}/>
+          <UserRoleView role={ role }/>
         </RoleColumn>
         <ColumnButton>
           <Button/>
