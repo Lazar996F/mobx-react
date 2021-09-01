@@ -79,3 +79,22 @@ code {
 .line-height-normal{
   line-height: normal;
 }
+
+.MUIRichTextEditor-placeHolder-21 {
+  position: inherit!important;
+  padding-bottom: 30px!important;
+}
+
+.MUIRichTextEditor-editorContainer-17{
+  padding-bottom:30px!important;
+}
+
+.MuiButton-containedPrimary {
+  color: black!important;
+  background-color: #E5E5E5!important;
+  font-weight: 700!important;
+  border-radius: 0!important;
+  box-shadow: none!important;
+  text-transform: none!important;
+  width: 100%;
+}

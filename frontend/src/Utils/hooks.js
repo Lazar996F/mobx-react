@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+import { useEffect } from 'react';
 
 export function useOutsideClick(ref,setToClose) {
   useEffect(() => {
@@ -12,5 +12,6 @@ export function useOutsideClick(ref,setToClose) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ ref ]);
 }
