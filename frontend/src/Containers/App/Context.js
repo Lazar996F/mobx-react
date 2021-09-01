@@ -47,7 +47,7 @@ const initialState = {
     },
     {
       src: '/icons/dispo.svg',
-      title: 'Disposuite'
+      title: 'DispoSuite'
     },
     {
       src: '/icons/esetup.png',

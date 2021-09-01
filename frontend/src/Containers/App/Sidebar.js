@@ -5,6 +5,7 @@ import { Wrapper } from '../../Components/Sidebar/Wrapper';
 import Context from './Context';
 import UserInfoBar from '../../Components/UserInfoBar';
 import NavigationWrapper from '../../Components/Layout/NavigationWrapper';
+import {linkItems} from '../../Utils/helpers';
 
 function SidebarContent() {
   const { state } = useContext(Context);
@@ -13,7 +14,7 @@ function SidebarContent() {
     <Wrapper>
       <Logo/>
       <NavigationWrapper>
-        { state.linkItems.map(item =>
+        { linkItems.map(item =>
           <NavLink
             to={ item.to }
             key={ item.to }

@@ -98,3 +98,7 @@ code {
   text-transform: none!important;
   width: 100%;
 }
+
+.MuiAccordionSummary-content{
+  align-items: center;
+}

@@ -14,7 +14,8 @@ function AddNewDataPrivacy() {
         subtitle: 'New version of the Data Privacy for all users'
       }
     });
-  }, [ dispatch ]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
