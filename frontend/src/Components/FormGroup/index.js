@@ -7,6 +7,7 @@ import ActiveDateInput from './ActiveDateInput';
 import Tabs from '../Tabs';
 import UploadButton from '../Button/Upload';
 import H3 from '../H3';
+import P from '../P';
 
 const Wrapper = styled.div`
   display: flex;
@@ -30,6 +31,9 @@ function FormGroup() {
       <Tabs tabContent={ () => <MUIRichTextEditor label="Enter changes..."/>}/>
       <H3 light small>PDF file with Data Privacy copy</H3>
       <UploadButton onChange={onUploadFileChange}/>
+      <H3 light small mb="0">Data Privacy URL</H3>
+      <P variant="subtext" mt="0">https://www.lorem.ch/dataprivacy/</P>
+      <P variant="blue">To change the URL go to general settings</P>
     </Wrapper>
   );
 }
