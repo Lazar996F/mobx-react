@@ -23,13 +23,13 @@ const IconsWrapper = styled.div`
   }
 `;
 
-function MenuContent({menuButtonsLabels}) {
-
-  const IconButtonsView = menuButtonsLabels.map(item => <IconButton src={item.src} title={item.title}/>)
+function MenuContent({ menuButtonsLabels }) {
+  const IconButtonsView = menuButtonsLabels.map((item, key) => <IconButton key={ key } src={ item.src }
+                                                                           title={ item.title }/>)
 
   return (
     <IconsWrapper>
-      {IconButtonsView}
+      { IconButtonsView }
     </IconsWrapper>
   );
 }

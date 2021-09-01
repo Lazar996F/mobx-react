@@ -1,11 +1,7 @@
 import styled from 'styled-components';
+import Checkbox from '@material-ui/core/Checkbox';
 import H3 from '../H3';
 import P from '../P';
-
-const Input = styled.input`
-  input[type=checkbox] {
-  }
-`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,9 +9,8 @@ const Wrapper = styled.div`
 `;
 
 const SelectItem = styled.div`
-  margin: 5px;
   display: flex;
-
+  align-items: center;
   > * {
     margin: 0 5px;
   }
@@ -26,6 +21,7 @@ const Options = styled.div`
 `;
 
 const UserLogo = styled.div`
+  margin-top: 2px;
   background-image: url(${ props => props['professional'] ? process.env.PUBLIC_URL + '/icons/professional_user_icon.svg' : process.env.PUBLIC_URL + '/icons/user_standard_icon.svg' });
   background-repeat: no-repeat;
   width: 16px;
@@ -39,12 +35,13 @@ function UsersTypeSelect() {
       <P variant="subtext">All changes must be accepted by the selected user or users</P>
       <Options>
         <SelectItem>
-          <Input type="checkbox" name="Professional Users"/>
+          <Checkbox
+          />
           <UserLogo professional/>
           <label>Professional Users</label>
         </SelectItem>
         <SelectItem>
-          <Input type="checkbox" name="End Users"/>
+          <Checkbox/>
           <UserLogo/>
           <label>End Users</label>
         </SelectItem>
