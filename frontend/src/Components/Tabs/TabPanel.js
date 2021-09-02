@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Box = styled.div`
   padding-top: 5px;
   padding-left: 15px;
-  background-color: ${props => props['styleState']==='create-privacy' ? '#ffff' : '#F2F2F2'};
+  background-color: ${props => props['stylestate']==='create-privacy' ? '#ffff' : '#F2F2F2'};
   border: ${props => props['stylestate']==='create-privacy' ? '1px solid #C7C7C7' : 0};
   padding-right: ${props => props['stylestate']=== 'create-privacy' && '15px'};
 `;

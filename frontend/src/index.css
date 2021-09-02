@@ -116,3 +116,7 @@ code {
   padding-right: 15px;
   margin-bottom: 15px;
 }
+
+.MUIRichTextEditor-editor-18 {
+  min-height: 100px;
+}

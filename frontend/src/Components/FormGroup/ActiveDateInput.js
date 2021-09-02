@@ -1,31 +1,43 @@
 import styled from 'styled-components';
-import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
 
 import H3 from '../H3';
+import { getCurrentDateTime } from '../../Utils/helpers';
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap
 `;
 
-function ActiveDateInput({handleDateChange,selectedDate}) {
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: 'flex',
+  },
+  textField: {
+    width: '300px'
+  },
+}));
+
+function ActiveDateInput({ handleDateChange }) {
+  const classes = useStyles();
+  const defaultTime = getCurrentDateTime();
+
   return (
     <Wrapper>
       <H3 light>Active from</H3>
-      <MuiPickersUtilsProvider utils={ DateFnsUtils }>
-        <KeyboardDatePicker
-          margin="normal"
-          id="date-picker-dialog"
-          label=" "
-          format="MM/dd/yyyy"
-          value={ selectedDate }
-          onChange={ handleDateChange }
-          KeyboardButtonProps={ {
-            'aria-label': 'change date',
-          } }
-        />
-      </MuiPickersUtilsProvider>
+      <TextField
+        onChange={ handleDateChange }
+        id="date"
+        label=" "
+        type="datetime-local"
+        defaultValue={ defaultTime }
+        className={ classes.textField }
+        InputLabelProps={ {
+          shrink: true,
+        } }
+      />
     </Wrapper>
   );
 }

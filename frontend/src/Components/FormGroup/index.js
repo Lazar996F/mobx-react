@@ -7,51 +7,46 @@ import Tabs from '../Tabs';
 import UploadButton from '../Button/Upload';
 import H3 from '../H3';
 import P from '../P';
-import { useState } from 'react';
 
 function FormGroup() {
-  const [ selectedDate, setSelectedDate ] = useState(new Date());
-
   const onUploadFileChange = (e) => {
     let files = e.target.files;
     let reader = new FileReader();
     reader.readAsDataURL(files[0]);
     reader.onload = (e) => {
-      console.log(">>Pdf data >>",e.target.result);
+      console.log(">>Pdf data >>", e.target.result);
     }
   }
 
   const onTitleInputChange = (e) => {
-    console.log(">>Input change>>",e.target.value)
+    console.log(">>Input change>>", e.target.value)
   }
 
   //** On Users Type Change **
   const onProfessionalUsersChange = (e) => {
-    if(e.target.checked) console.log(">>>>>Professional change>>>",e.target.value)
+    if (e.target.checked) console.log(">>>>>Professional change>>>", e.target.value)
   }
-
   const onEndUsersChange = (e) => {
-    if(e.target.checked) console.log(">>>End users change>>>>",e.target.value)
+    if (e.target.checked) console.log(">>>End users change>>>>", e.target.value)
   }
 
   // ** On Date input change
-  const handleDateChange = (date) => {
-    console.log(">>>>DATE>>>",date)
-    setSelectedDate(date);
+  const handleDateChange = (e) => {
+    console.log(">>>>DATE>>>", e.target.value);
   };
 
   return (
     <>
-      <TitleInput onChange={onTitleInputChange} />
+      <TitleInput onChange={ onTitleInputChange }/>
       <div className="flex-row">
         <UsersTypeSelect
-          onProfessionalUsersChange={onProfessionalUsersChange}
-          onEndUsersChange={onEndUsersChange}
+          onProfessionalUsersChange={ onProfessionalUsersChange }
+          onEndUsersChange={ onEndUsersChange }
         />
-        <ActiveDateInput handleDateChange={handleDateChange} selectedDate={selectedDate}/>
+        <ActiveDateInput handleDateChange={ handleDateChange }/>
       </div>
       <Tabs
-        styleState="create-privacy"
+        stylestate="create-privacy"
         tabContent={ () =>
           <>
             <MUIRichTextEditor label="Enter changes..."/>

@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export const linkItems = [
   {
     title: "Dashboard",
@@ -32,11 +34,17 @@ export const linkItems = [
 export const getInitials = (name) => {
   let initials = name.split(' ');
 
-  if(initials.length > 1) {
+  if (initials.length > 1) {
     initials = initials.shift().charAt(0) + initials.pop().charAt(0);
   } else {
     initials = name.substring(0, 2);
   }
 
   return initials.toUpperCase();
+}
+
+// returns current and formatted date with time
+export const getCurrentDateTime = () => {
+  const now = new Date();
+  return moment(now).format('YYYY-MM-DD[T]HH:mm:ss');
 }

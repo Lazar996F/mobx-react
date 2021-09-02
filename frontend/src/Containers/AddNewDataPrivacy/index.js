@@ -24,7 +24,7 @@ function AddNewDataPrivacy() {
     <Wrapper>
       <FormGroup/>
       <div className="flex-content-between">
-      <Button label="Create Data Privacy"/>
+        <Button label="Create Data Privacy"/>
         <Link linkTo="/privacy" title="Go back to Data Privacy"/>
       </div>
     </Wrapper>
