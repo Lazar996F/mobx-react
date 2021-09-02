@@ -51,11 +51,11 @@ code {
 }
 
 .PrivateTabIndicator-colorPrimary-6 {
-  background-color: #CF1F14!important;
+  background-color: #CF1F14 !important;
 }
 
 .MuiTabs-flexContainer {
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 .flex-columns {
@@ -76,30 +76,33 @@ code {
   justify-content: space-between;
 }
 
-.line-height-normal{
+.line-height-normal {
   line-height: normal;
 }
 
 .MUIRichTextEditor-placeHolder-21 {
-  position: inherit!important;
-  padding-bottom: 30px!important;
+  position: inherit !important;
+  padding-top: 15px !important;
+  font-size: 14px;
 }
 
-.MUIRichTextEditor-editorContainer-17{
-  padding-bottom:30px!important;
+.MUIRichTextEditor-editorContainer-17 {
+  border: 1px solid #C7C7C7;
+  min-height: 130px;
+  padding-top: 20px !important;
 }
 
 .MuiButton-containedPrimary {
-  color: black!important;
-  background-color: #E5E5E5!important;
-  font-weight: 700!important;
-  border-radius: 0!important;
-  box-shadow: none!important;
-  text-transform: none!important;
+  color: black !important;
+  background-color: #E5E5E5 !important;
+  font-weight: 700 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-transform: none !important;
   width: 100%;
 }
 
-.MuiAccordionSummary-content{
+.MuiAccordionSummary-content {
   align-items: center;
 }
 
@@ -107,4 +110,11 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.sc-dQoVA {
+  background-color: #ffff !important;
+  border: 1px solid #C7C7C7;
+  padding-right: 15px;
+  margin-bottom: 15px;
 }

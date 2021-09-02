@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-const SelectItem = styled.div`
+const SelectItem = styled.label`
   display: flex;
   align-items: center;
   > * {
@@ -35,15 +35,14 @@ function UsersTypeSelect() {
       <P variant="subtext">All changes must be accepted by the selected user or users</P>
       <Options>
         <SelectItem>
-          <Checkbox
-          />
+          <Checkbox/>
           <UserLogo professional/>
-          <label>Professional Users</label>
+            Professional Users
         </SelectItem>
         <SelectItem>
           <Checkbox/>
           <UserLogo/>
-          <label>End Users</label>
+            End Users
         </SelectItem>
       </Options>
     </Wrapper>
