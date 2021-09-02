@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function Tabs({ tabContent }) {
+function Tabs({ tabContent,stylestate }) {
   const classes = useStyles();
   const [ value, setValue ] = React.useState(0);
 
@@ -51,16 +51,16 @@ function Tabs({ tabContent }) {
         <Tab label="Francais" { ...a11yProps(2) } className={ classes.tabLabel }/>
         <Tab label="Italiano" { ...a11yProps(3) } className={ classes.tabLabel }/>
       </TabsMUI>
-      <TabPanel value={ value } index={ 0 }>
+      <TabPanel value={ value } index={ 0 } stylestate={stylestate}>
         { TabContent }
       </TabPanel>
-      <TabPanel value={ value } index={ 1 }>
+      <TabPanel value={ value } index={ 1 } stylestate={stylestate}>
         { TabContent }
       </TabPanel>
-      <TabPanel value={ value } index={ 2 }>
+      <TabPanel value={ value } index={ 2 } stylestate={stylestate}>
         { TabContent }
       </TabPanel>
-      <TabPanel value={ value } index={ 3 }>
+      <TabPanel value={ value } index={ 3 } stylestate={stylestate}>
         { TabContent }
       </TabPanel>
     </div>

@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 const Box = styled.div`
-  background-color: #F8F8F8;
   padding-top: 5px;
   padding-left: 15px;
+  background-color: ${props => props['styleState']==='create-privacy' ? '#ffff' : '#F2F2F2'};
+  border: ${props => props['stylestate']==='create-privacy' ? '1px solid #C7C7C7' : 0};
+  padding-right: ${props => props['stylestate']=== 'create-privacy' && '15px'};
 `;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -17,7 +18,7 @@ function TabPanel(props) {
       { ...other }
     >
       { value === index && (
-        <Box>
+        <Box stylestate={props.stylestate}>
          { children }
         </Box>
       ) }

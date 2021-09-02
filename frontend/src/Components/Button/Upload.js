@@ -22,18 +22,18 @@ export default function UploadButtons({onChange}) {
   return (
     <div className={classes.root}>
       <input
-        accept="image/*"
+        accept="application/pdf/*"
         className={classes.input}
         id="contained-button-file"
         multiple
         type="file"
+        onChange={onChange}
       />
       <label htmlFor="contained-button-file" className={classes.label}>
         <Button variant="contained" color="primary" component="span">
           Click to upload or Drag&Drop a file
         </Button>
       </label>
-      <input accept="image/*" className={classes.input} id="icon-button-file" type="file" onChange={onChange} />
     </div>
   );
 }

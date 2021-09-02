@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 const SelectItem = styled.label`
   display: flex;
   align-items: center;
+
   > * {
     margin: 0 5px;
   }
@@ -28,21 +29,22 @@ const UserLogo = styled.div`
   height: 18px;
 `;
 
-function UsersTypeSelect() {
+function UsersTypeSelect({ onProfessionalUsersChange,onEndUsersChange }) {
+
   return (
     <Wrapper>
       <H3 light>Select type of users</H3>
       <P variant="subtext">All changes must be accepted by the selected user or users</P>
       <Options>
         <SelectItem>
-          <Checkbox/>
+          <Checkbox value="Professional Users" onChange={onProfessionalUsersChange}/>
           <UserLogo professional/>
-            Professional Users
+          Professional Users
         </SelectItem>
         <SelectItem>
-          <Checkbox/>
+          <Checkbox value="End Users" onChange={onEndUsersChange}/>
           <UserLogo/>
-            End Users
+          End Users
         </SelectItem>
       </Options>
     </Wrapper>
