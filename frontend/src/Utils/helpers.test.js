@@ -1,3 +1,5 @@
+import {getInitials} from './helpers';
+
 test('getInitials method', () => {
-  expect(true).toBe(true);
+  expect(getInitials('Test Name')).toBe('TN');
 })

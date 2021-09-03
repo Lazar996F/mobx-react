@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
 import H3 from '../H3';
-import { getCurrentDateTime } from '../../Utils/helpers';
 
 const Wrapper = styled.div`
   display: flex;
@@ -16,23 +15,25 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   textField: {
-    width: '300px'
+    maxWidth: '250px'
   },
 }));
 
-function ActiveDateInput({ handleDateChange }) {
+function ActiveDateInput({ handleDateChange,value }) {
   const classes = useStyles();
-  const defaultTime = getCurrentDateTime();
 
   return (
     <Wrapper>
       <H3 light>Active from</H3>
       <TextField
         onChange={ handleDateChange }
+        inputProps={{
+          name: 'activeDate'
+        }}
         id="date"
         label=" "
         type="datetime-local"
-        defaultValue={ defaultTime }
+        value={value}
         className={ classes.textField }
         InputLabelProps={ {
           shrink: true,

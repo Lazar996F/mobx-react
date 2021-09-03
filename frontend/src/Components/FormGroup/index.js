@@ -1,4 +1,5 @@
 import MUIRichTextEditor from 'mui-rte';
+import {useFormik} from 'formik';
 
 import TitleInput from './TitleInput';
 import UsersTypeSelect from './UsersTypeSelect';
@@ -7,43 +8,42 @@ import Tabs from '../Tabs';
 import UploadButton from '../Button/Upload';
 import H3 from '../H3';
 import P from '../P';
+import Link from '../Link';
+import SubmitButton from '../Button/SubmitPrimary';
+import { getCurrentDateTime } from '../../Utils/helpers';
 
 function FormGroup() {
+
   const onUploadFileChange = (e) => {
     let files = e.target.files;
     let reader = new FileReader();
     reader.readAsDataURL(files[0]);
-    reader.onload = (e) => {
-      console.log(">>Pdf data >>", e.target.result);
+    return reader.onload = e => e.target.result
+  }
+
+  const formik = useFormik({
+    initialValues: {
+      title: '',
+      areProfessionalUsers: false,
+      areEndUsers: false,
+      activeDate: getCurrentDateTime()
+    },
+    onSubmit: values => {
+      console.log(">>>Form data>>>>",values);
     }
-  }
-
-  const onTitleInputChange = (e) => {
-    console.log(">>Input change>>", e.target.value)
-  }
-
-  //** On Users Type Change **
-  const onProfessionalUsersChange = (e) => {
-    if (e.target.checked) console.log(">>>>>Professional change>>>", e.target.value)
-  }
-  const onEndUsersChange = (e) => {
-    if (e.target.checked) console.log(">>>End users change>>>>", e.target.value)
-  }
-
-  // ** On Date input change
-  const handleDateChange = (e) => {
-    console.log(">>>>DATE>>>", e.target.value);
-  };
+  });
 
   return (
-    <>
-      <TitleInput onChange={ onTitleInputChange }/>
+    <form onSubmit={formik.handleSubmit}>
+      <TitleInput onChange={ formik.handleChange } value={formik.values.title}/>
       <div className="flex-row">
         <UsersTypeSelect
-          onProfessionalUsersChange={ onProfessionalUsersChange }
-          onEndUsersChange={ onEndUsersChange }
+          onProfessionalUsersChange={ formik.handleChange }
+          onEndUsersChange={ formik.handleChange }
+          professionalUsersValue={formik.values.areProfessionalUsers}
+          endUsersValue={formik.values.areEndUsers}
         />
-        <ActiveDateInput handleDateChange={ handleDateChange }/>
+        <ActiveDateInput handleDateChange={ formik.handleChange } value={formik.values.activeDate}/>
       </div>
       <Tabs
         stylestate="create-privacy"
@@ -57,7 +57,11 @@ function FormGroup() {
             <P variant="blue">To change the URL go to general settings</P>
           </>
         }/>
-    </>
+      <div className="flex-content-between">
+        <SubmitButton label="Create Data Privacy"/>
+        <Link linkTo="/privacy" title="Go back to Data Privacy"/>
+      </div>
+    </form>
   );
 }
 

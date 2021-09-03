@@ -110,6 +110,7 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 
 .sc-dQoVA {
@@ -118,5 +119,9 @@ code {
 }
 
 .MUIRichTextEditor-editor-18 {
+  min-height: 100px;
+}
+
+.MUIRichTextEditor-editorContainer-19{
   min-height: 100px;
 }

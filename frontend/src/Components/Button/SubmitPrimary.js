@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const A = styled.a`
+const Button = styled.button`
   background-color: black;
   display: inline-block;
   cursor: pointer;
@@ -14,8 +14,9 @@ export const A = styled.a`
   text-align: center;
 `;
 
-function Primary({linkTo,label}) {
-  return <A href={linkTo}>{label}</A>
+function SubmitPrimary({label}) {
+  return <Button type="submit">{label}</Button>
+
 }
 
-export default Primary;
+export default SubmitPrimary;

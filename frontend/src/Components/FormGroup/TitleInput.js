@@ -18,10 +18,10 @@ const Input = styled.input`
   }
 `;
 
-function TitleInput({onChange}) {
+function TitleInput({onChange,value}) {
   return (
     <>
-      <Input placeholder="Title (optional)" onChange={onChange}/>
+      <Input placeholder="Title (optional)" onChange={onChange} name="title" value={value}/>
     </>
   );
 }

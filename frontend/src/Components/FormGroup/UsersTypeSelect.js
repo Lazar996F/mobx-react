@@ -29,7 +29,7 @@ const UserLogo = styled.div`
   height: 18px;
 `;
 
-function UsersTypeSelect({ onProfessionalUsersChange,onEndUsersChange }) {
+function UsersTypeSelect({ onProfessionalUsersChange,onEndUsersChange,professionalUsersValue,endUsersValue }) {
 
   return (
     <Wrapper>
@@ -37,12 +37,12 @@ function UsersTypeSelect({ onProfessionalUsersChange,onEndUsersChange }) {
       <P variant="subtext">All changes must be accepted by the selected user or users</P>
       <Options>
         <SelectItem>
-          <Checkbox value="Professional Users" onChange={onProfessionalUsersChange}/>
+          <Checkbox value={professionalUsersValue} onChange={onProfessionalUsersChange} name="areProfessionalUsers"/>
           <UserLogo professional/>
           Professional Users
         </SelectItem>
         <SelectItem>
-          <Checkbox value="End Users" onChange={onEndUsersChange}/>
+          <Checkbox value={endUsersValue} onChange={onEndUsersChange} name="areEndUsers"/>
           <UserLogo/>
           End Users
         </SelectItem>
