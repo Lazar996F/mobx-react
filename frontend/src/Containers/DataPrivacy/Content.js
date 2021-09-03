@@ -3,7 +3,7 @@ import { useEffect, useContext } from 'react';
 import ButtonAddNew from '../../Components/Button/Primary';
 import DataPrivacyRow from './DataPrivacyRow';
 import DataPrivacyContext, { SET_POLICIES } from './Context';
-import dummyData from './dummyData';
+import dummyData from '../../Utils/dummyData';
 import ButtonWrapper from '../../Components/Layout/DataPrivacyButtonWrapper';
 
 function Content() {

@@ -37,12 +37,22 @@ function UsersTypeSelect({ onProfessionalUsersChange,onEndUsersChange,profession
       <P variant="subtext">All changes must be accepted by the selected user or users</P>
       <Options>
         <SelectItem>
-          <Checkbox value={professionalUsersValue} onChange={onProfessionalUsersChange} name="areProfessionalUsers"/>
+          <Checkbox
+            value={professionalUsersValue}
+            onChange={onProfessionalUsersChange}
+            name="areProfessionalUsers"
+            checked={professionalUsersValue}
+          />
           <UserLogo professional/>
           Professional Users
         </SelectItem>
         <SelectItem>
-          <Checkbox value={endUsersValue} onChange={onEndUsersChange} name="areEndUsers"/>
+          <Checkbox
+            value={endUsersValue}
+            onChange={onEndUsersChange}
+            name="areEndUsers"
+            checked={endUsersValue}
+          />
           <UserLogo/>
           End Users
         </SelectItem>

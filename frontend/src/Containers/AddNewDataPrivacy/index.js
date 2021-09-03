@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 
 import Context, { SET_TITLE_SUBTITLE } from '../App/Context';
 import FormGroup from '../../Components/FormGroup';
-import Wrapper from '../../Components/Layout/NewDataPrivacyPageWrapper';
+import Wrapper from '../../Components/Layout/DataPrivacyFormWrapper';
 
 function AddNewDataPrivacy() {
   const { dispatch } = useContext(Context);
@@ -18,13 +18,9 @@ function AddNewDataPrivacy() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleSubmit = (e) => {
-    console.log(">>>>>Submit>>>", e);
-  }
-
   return (
     <Wrapper>
-      <FormGroup handleSubmit={ handleSubmit }/>
+      <FormGroup />
     </Wrapper>
   )
 }

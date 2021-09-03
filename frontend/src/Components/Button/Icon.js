@@ -7,7 +7,8 @@ const Wrapper = styled.button`
   width: 74px;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
+
   :hover {
     background-color: #E3E3E3;
     border-radius: 7%;
@@ -20,10 +21,10 @@ const LogoLabel = styled.span`
   margin-top: 8px;
 `;
 
-function Disposuite({title,src}) {
+function Disposuite({ title, src }) {
   return (
     <Wrapper>
-      <img src={ process.env.PUBLIC_URL + src} alt={src}/>
+      <img src={ process.env.PUBLIC_URL + src } alt={ src }/>
       <LogoLabel>{ title }</LogoLabel>
     </Wrapper>
   );

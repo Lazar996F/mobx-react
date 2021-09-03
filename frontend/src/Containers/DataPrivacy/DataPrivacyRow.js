@@ -11,7 +11,6 @@ import ActiveInfoColumn from '../../Components/Accordion/ActiveInfoColumn';
 import UserRoleView from '../../Components/UserRoleView';
 import P from '../../Components/P';
 import DownloadPdf from '../../Components/DownloadPdf';
-import React from 'react';
 
 function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
 
@@ -36,7 +35,7 @@ function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
           <UserRoleView role={ role }/>
         </RoleColumn>
         <ColumnButton>
-          <Button/>
+          { state === 'draft' && <Button label="Change" linkTo="privacy/update"/> }
         </ColumnButton>
       </Accordion>
     </RowWrapper>

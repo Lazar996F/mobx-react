@@ -14,8 +14,8 @@ export const A = styled.a`
   text-align: center;
 `;
 
-function Primary({linkTo,label}) {
-  return <A href={linkTo}>{label}</A>
+function Primary({ linkTo, label }) {
+  return <A href={ linkTo }>{ label }</A>
 }
 
 export default Primary;

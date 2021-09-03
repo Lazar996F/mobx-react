@@ -1,21 +1,18 @@
 import styled from 'styled-components';
 
-export const ChangeButton = styled.button`
+export const A = styled.a`
   background-color: inherit;
   border: 1px solid #8080802e;
   color: #80808059;
   cursor: pointer;
-`;
-
-export const Label = styled.label`
   font-size: 0.8em;
+  line-height: 18px;
+  padding: 0 3px 0px 3px;
 `;
 
-function Secondary() {
+function Secondary({ label,linkTo }) {
   return (
-    <ChangeButton>
-      <Label>Change</Label>
-    </ChangeButton>
+    <A linkTo={linkTo}>{label}</A>
   );
 }
 

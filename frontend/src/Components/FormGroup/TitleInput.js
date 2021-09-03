@@ -8,20 +8,21 @@ const Input = styled.input`
   color: #000000;
   border: 0;
   border-bottom: 1px solid ${ COLOR_SECONDARY_LIGHT };
+  width: 100%;
 
   :focus {
     outline: none;
   }
 
-  ::placeholder{
+  ::placeholder {
     color: black;
   }
 `;
 
-function TitleInput({onChange,value}) {
+function TitleInput({ onChange, value }) {
   return (
     <>
-      <Input placeholder="Title (optional)" onChange={onChange} name="title" value={value}/>
+      <Input placeholder="Title (optional)" onChange={ onChange } name="title" value={ value }/>
     </>
   );
 }

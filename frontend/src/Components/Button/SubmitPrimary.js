@@ -14,8 +14,8 @@ const Button = styled.button`
   text-align: center;
 `;
 
-function SubmitPrimary({label}) {
-  return <Button type="submit">{label}</Button>
+function SubmitPrimary({ label }) {
+  return <Button type="submit">{ label }</Button>
 
 }
 

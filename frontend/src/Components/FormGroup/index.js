@@ -1,5 +1,5 @@
 import MUIRichTextEditor from 'mui-rte';
-import {useFormik} from 'formik';
+import { useFormik } from 'formik';
 
 import TitleInput from './TitleInput';
 import UsersTypeSelect from './UsersTypeSelect';
@@ -12,7 +12,7 @@ import Link from '../Link';
 import SubmitButton from '../Button/SubmitPrimary';
 import { getCurrentDateTime } from '../../Utils/helpers';
 
-function FormGroup() {
+function FormGroup({title,areProfessionalUsers,areEndUsers,variant}) {
 
   const onUploadFileChange = (e) => {
     let files = e.target.files;
@@ -23,27 +23,27 @@ function FormGroup() {
 
   const formik = useFormik({
     initialValues: {
-      title: '',
-      areProfessionalUsers: false,
-      areEndUsers: false,
+      title: variant==='update' ? title : '',
+      areProfessionalUsers: variant==='update' ? areProfessionalUsers : false,
+      areEndUsers: variant==='update' ? areEndUsers : false,
       activeDate: getCurrentDateTime()
     },
     onSubmit: values => {
-      console.log(">>>Form data>>>>",values);
+      console.log(">>>Form data>>>>", values);
     }
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <TitleInput onChange={ formik.handleChange } value={formik.values.title}/>
+    <form onSubmit={ formik.handleSubmit }>
+      <TitleInput onChange={ formik.handleChange } value={ formik.values.title }/>
       <div className="flex-row">
         <UsersTypeSelect
           onProfessionalUsersChange={ formik.handleChange }
           onEndUsersChange={ formik.handleChange }
-          professionalUsersValue={formik.values.areProfessionalUsers}
-          endUsersValue={formik.values.areEndUsers}
+          professionalUsersValue={ formik.values.areProfessionalUsers }
+          endUsersValue={ formik.values.areEndUsers }
         />
-        <ActiveDateInput handleDateChange={ formik.handleChange } value={formik.values.activeDate}/>
+        <ActiveDateInput handleDateChange={ formik.handleChange } value={ formik.values.activeDate }/>
       </div>
       <Tabs
         stylestate="create-privacy"
@@ -56,7 +56,8 @@ function FormGroup() {
             <P variant="subtext" mt="0">https://www.lorem.ch/dataprivacy/</P>
             <P variant="blue">To change the URL go to general settings</P>
           </>
-        }/>
+        }
+      />
       <div className="flex-content-between">
         <SubmitButton label="Create Data Privacy"/>
         <Link linkTo="/privacy" title="Go back to Data Privacy"/>

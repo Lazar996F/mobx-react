@@ -12,24 +12,24 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
   },
   label: {
-    margin:0
+    margin: 0
   }
 }));
 
-export default function UploadButtons({onChange}) {
+export default function UploadButtons({ onChange }) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={ classes.root }>
       <input
         accept="application/pdf/*"
-        className={classes.input}
+        className={ classes.input }
         id="contained-button-file"
         multiple
         type="file"
-        onChange={onChange}
+        onChange={ onChange }
       />
-      <label htmlFor="contained-button-file" className={classes.label}>
+      <label htmlFor="contained-button-file" className={ classes.label }>
         <Button variant="contained" color="primary" component="span">
           Click to upload or Drag&Drop a file
         </Button>
