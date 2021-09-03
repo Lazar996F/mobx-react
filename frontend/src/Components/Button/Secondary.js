@@ -10,9 +10,9 @@ export const A = styled.a`
   padding: 0 3px 0px 3px;
 `;
 
-function Secondary({ label,linkTo }) {
+function Secondary({ label,linkTo, onClick }) {
   return (
-    <A linkTo={linkTo}>{label}</A>
+    <A href={linkTo} onClick={onClick}>{label}</A>
   );
 }
 

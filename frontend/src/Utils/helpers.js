@@ -48,3 +48,28 @@ export const getCurrentDateTime = () => {
   const now = new Date();
   return moment(now).format('YYYY-MM-DD[T]HH:mm:ss');
 }
+
+export const checkAndReturnUserRole = (role) => {
+  switch(role) {
+    case 'Professional Users':
+      return {
+        areProfessionalUsers: true,
+        areEndUsers: false
+      }
+    case 'End Users':
+      return {
+        areProfessionalUsers: false,
+        areEndUsers: true
+      }
+    case 'Professional Users,End Users':
+      return {
+        areProfessionalUsers: true,
+        areEndUsers: true
+      }
+    default:
+      return {
+        areProfessionalUsers: false,
+        areEndUsers: false
+      }
+  }
+}

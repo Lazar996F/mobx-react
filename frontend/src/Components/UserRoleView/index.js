@@ -5,14 +5,14 @@ import Tooltip from '../Tooltip';
 function UserRoleView({ role }) {
   return (
     <>
-      { role === 'End users' && <Tooltip title={ role }><EndUser/></Tooltip> }
-      { role === 'Professional users' && <Tooltip title={ role }><ProfessionalUser/></Tooltip> }
-      { role === 'Professional users,End users' &&
+      { role === 'End Users' && <Tooltip title={ role }><EndUser/></Tooltip> }
+      { role === 'Professional Users' && <Tooltip title={ role }><ProfessionalUser/></Tooltip> }
+      { role === 'Professional Users,End Users' &&
       <>
-        <Tooltip title="Professional users">
+        <Tooltip title="Professional Users">
           <ProfessionalUser role={ role }/>
         </Tooltip>
-        <Tooltip title="End users">
+        <Tooltip title="End Users">
           <EndUser />
         </Tooltip>
       </> }

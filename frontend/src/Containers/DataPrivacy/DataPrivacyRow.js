@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+
 import CircleWithVerticalLine from '../../Components/CircleWithVerticalLine';
 import TimelineChip from '../../Components/Chip/TimelineChip';
 import Button from '../../Components/Button/Secondary';
@@ -11,8 +13,11 @@ import ActiveInfoColumn from '../../Components/Accordion/ActiveInfoColumn';
 import UserRoleView from '../../Components/UserRoleView';
 import P from '../../Components/P';
 import DownloadPdf from '../../Components/DownloadPdf';
+import DataPrivacyContext, { SET_EDIT_POLICY_DATA } from './Context';
+import { checkAndReturnUserRole } from '../../Utils/helpers';
 
 function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
+  const { dispatch } = useContext(DataPrivacyContext);
 
   const tabContent = () => (
     <div className="line-height-normal">
@@ -23,22 +28,37 @@ function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
     </div>
   )
 
+  const onButtonChangeClick = () => {
+  const usersRoles = checkAndReturnUserRole(role);
+
+    dispatch({
+      type: SET_EDIT_POLICY_DATA,
+      payload: {
+        areProfessionalUsers: usersRoles.areProfessionalUsers,
+        areEndUsers: usersRoles.areEndUsers,
+        pdfData: pdf
+      }
+    });
+  }
+
   return (
-    <RowWrapper>
-      <CircleWithVerticalLine notShowLine={ notShowLine } state={ state }/>
-      <Accordion expandedContent={ () => ExpandedContent({ tabContent, pdf, date }) }>
-        <ActiveInfoColumn>
-          <H3>Active from { date }</H3>
-          <TimelineChip state={ state }/>
-        </ActiveInfoColumn>
-        <RoleColumn>
-          <UserRoleView role={ role }/>
-        </RoleColumn>
-        <ColumnButton>
-          { state === 'draft' && <Button label="Change" linkTo="privacy/update"/> }
-        </ColumnButton>
-      </Accordion>
-    </RowWrapper>
+    <>
+      <RowWrapper>
+        <CircleWithVerticalLine notShowLine={ notShowLine } state={ state }/>
+        <Accordion expandedContent={ () => ExpandedContent({ tabContent, pdf, date }) }>
+          <ActiveInfoColumn>
+            <H3>Active from { date }</H3>
+            <TimelineChip state={ state }/>
+          </ActiveInfoColumn>
+          <RoleColumn>
+            <UserRoleView role={ role }/>
+          </RoleColumn>
+          <ColumnButton>
+          </ColumnButton>
+        </Accordion>
+      </RowWrapper>
+      { state === 'draft' && <Button label="Change" linkTo="privacy/update" onClick={onButtonChangeClick}/> }
+    </>
   );
 }
 

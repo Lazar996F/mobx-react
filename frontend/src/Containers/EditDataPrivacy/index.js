@@ -1,11 +1,11 @@
 import FormGroup from '../../Components/FormGroup';
 import { useContext, useEffect } from 'react';
-import Context, { SET_TITLE_SUBTITLE } from '../App/Context';
+import AppContext, { SET_TITLE_SUBTITLE } from '../App/Context';
 import Wrapper from '../../Components/Layout/DataPrivacyFormWrapper';
 import { getCurrentDateTime } from '../../Utils/helpers';
 
-function EditDataPrivacy({areProfessionalUsers,areEndUsers,pdfDocument}) {
-  const { dispatch } = useContext(Context);
+function EditDataPrivacy() {
+  const { dispatch } = useContext(AppContext);
 
   useEffect(() => {
     dispatch({
@@ -22,7 +22,13 @@ function EditDataPrivacy({areProfessionalUsers,areEndUsers,pdfDocument}) {
   const title = `Data Privacy changes on the date ${changedDate}`;
   return (
     <Wrapper>
-      <FormGroup variant="update" chagedDate={changedDate} title={title} areProfessionalUsers={true} areEndUsers={true}/>
+      <FormGroup
+        variant="update"
+        chagedDate={changedDate}
+        title={title}
+        areProfessionalUsers={true}
+        areEndUsers={true}
+      />
     </Wrapper>
   );
 }
