@@ -1,8 +1,8 @@
 import FormGroup from '../../Components/FormGroup';
 import { useContext, useEffect } from 'react';
 import AppContext, { SET_TITLE_SUBTITLE } from '../App/Context';
-import Wrapper from '../../Components/Layout/DataPrivacyFormWrapper';
 import { getCurrentDateTime } from '../../Utils/helpers';
+import Wrapper from '../../Components/Layout/DataPrivacyFormWrapper';
 
 function EditDataPrivacy() {
   const { dispatch } = useContext(AppContext);
@@ -19,15 +19,16 @@ function EditDataPrivacy() {
   }, []);
 
   const changedDate = getCurrentDateTime();
-  const title = `Data Privacy changes on the date ${changedDate}`;
+  const title = `Data Privacy changes on the date ${ changedDate }`;
+
   return (
     <Wrapper>
       <FormGroup
         variant="update"
-        chagedDate={changedDate}
-        title={title}
-        areProfessionalUsers={true}
-        areEndUsers={true}
+        chagedDate={ changedDate }
+        title={ title }
+        areProfessionalUsers={ true }
+        areEndUsers={ true }
       />
     </Wrapper>
   );

@@ -12,7 +12,7 @@ import Link from '../Link';
 import SubmitButton from '../Button/SubmitPrimary';
 import { getCurrentDateTime } from '../../Utils/helpers';
 
-function FormGroup({title,areProfessionalUsers,areEndUsers,variant}) {
+function FormGroup({ title, areProfessionalUsers, areEndUsers, variant }) {
 
   const onUploadFileChange = (e) => {
     let files = e.target.files;
@@ -23,9 +23,9 @@ function FormGroup({title,areProfessionalUsers,areEndUsers,variant}) {
 
   const formik = useFormik({
     initialValues: {
-      title: variant==='update' ? title : '',
-      areProfessionalUsers: variant==='update' ? areProfessionalUsers : false,
-      areEndUsers: variant==='update' ? areEndUsers : false,
+      title: variant === 'update' ? title : '',
+      areProfessionalUsers: variant === 'update' ? areProfessionalUsers : false,
+      areEndUsers: variant === 'update' ? areEndUsers : false,
       activeDate: getCurrentDateTime()
     },
     onSubmit: values => {
@@ -51,7 +51,7 @@ function FormGroup({title,areProfessionalUsers,areEndUsers,variant}) {
           <>
             <MUIRichTextEditor label="Enter changes..."/>
             <H3 light small>PDF file with Data Privacy copy</H3>
-            <UploadButton onChange={ onUploadFileChange }/>
+            { variant === 'update' ? <>replace file</> : <UploadButton onChange={ onUploadFileChange }/> }
             <H3 light small mb="0">Data Privacy URL</H3>
             <P variant="subtext" mt="0">https://www.lorem.ch/dataprivacy/</P>
             <P variant="blue">To change the URL go to general settings</P>
@@ -59,7 +59,12 @@ function FormGroup({title,areProfessionalUsers,areEndUsers,variant}) {
         }
       />
       <div className="flex-content-between">
-        <SubmitButton label="Create Data Privacy"/>
+        { variant === 'update' ?
+          <div>
+            <SubmitButton label="Save Data Privacy changes"/>
+            <button>Delete</button>
+          </div> :
+          <SubmitButton label="Create Data Privacy"/> }
         <Link linkTo="/privacy" title="Go back to Data Privacy"/>
       </div>
     </form>

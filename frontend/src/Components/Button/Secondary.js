@@ -7,12 +7,13 @@ export const A = styled.a`
   cursor: pointer;
   font-size: 0.8em;
   line-height: 18px;
-  padding: 0 3px 0px 3px;
+  padding: 0 3px 0 3px;
+  text-decoration: none;
 `;
 
-function Secondary({ label,linkTo, onClick }) {
+function Secondary({ label, linkTo, onClick }) {
   return (
-    <A href={linkTo} onClick={onClick}>{label}</A>
+    <A href={ linkTo } onClick={ onClick }>{ label }</A>
   );
 }
 
