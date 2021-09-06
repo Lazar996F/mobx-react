@@ -13,10 +13,13 @@ const useStyles = makeStyles((theme) => ({
   },
   label: {
     margin: 0
+  },
+  button: {
+    color: '#1081FC!important'
   }
 }));
 
-export default function UploadButtons({ onChange }) {
+export default function UploadButtons({ onChange, variant }) {
   const classes = useStyles();
 
   return (
@@ -29,11 +32,16 @@ export default function UploadButtons({ onChange }) {
         type="file"
         onChange={ onChange }
       />
-      <label htmlFor="contained-button-file" className={ classes.label }>
-        <Button variant="contained" color="primary" component="span">
-          Click to upload or Drag&Drop a file
-        </Button>
-      </label>
+      { variant !== 'replace' ? <label htmlFor="contained-button-file" className={ classes.label }>
+          <Button variant="contained" color="primary" component="span">
+            Click to upload or Drag&Drop a file
+          </Button>
+        </label> :
+        <label htmlFor="contained-button-file" className={ classes.label }>
+          <Button variant="contained" color="primary" component="span" className={classes.button}>
+            Replace file
+          </Button>
+        </label> }
     </div>
   );
 }

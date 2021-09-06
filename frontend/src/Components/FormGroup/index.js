@@ -16,7 +16,7 @@ import DownloadButton from '../Button/Download';
 
 
 function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf, activeDate }) {
-  console.log(">>>FORM group >>", activeDate)
+
   const onUploadFileChange = (e) => {
     let files = e.target.files;
     let reader = new FileReader();
@@ -51,6 +51,7 @@ function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf, act
       </div>
       <Tabs
         stylestate="create-privacy"
+        inkBarStyle={{background: '#CF1F14!important'}}
         tabContent={ () =>
           <>
             <MUIRichTextEditor label="Enter changes..."/>
@@ -58,7 +59,7 @@ function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf, act
             { variant === 'update' ?
               <div className="flex-content-between bg-light-gray padding-12">
                 <DownloadButton label={ pdf } urlToFile="#"/>
-                <Link linkTo="#" title="Replace file"/>
+                <UploadButton onChange={onUploadFileChange} variant="replace"/>
               </div>
               : <UploadButton onChange={ onUploadFileChange }/> }
             <H3 light small mb="0">Data Privacy URL</H3>
