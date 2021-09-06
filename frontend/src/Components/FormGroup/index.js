@@ -12,9 +12,11 @@ import Link from '../Link';
 import SubmitButton from '../Button/SubmitPrimary';
 import { getCurrentDateTime } from '../../Utils/helpers';
 import PrimaryLightButton from '../Button/PrimaryLight';
+import DownloadButton from '../Button/Download';
 
-function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf,activeDate }) {
-console.log(">>>FORM group >>",activeDate)
+
+function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf, activeDate }) {
+  console.log(">>>FORM group >>", activeDate)
   const onUploadFileChange = (e) => {
     let files = e.target.files;
     let reader = new FileReader();
@@ -53,7 +55,12 @@ console.log(">>>FORM group >>",activeDate)
           <>
             <MUIRichTextEditor label="Enter changes..."/>
             <H3 light small>PDF file with Data Privacy copy</H3>
-            { variant === 'update' ? <>replace file</> : <UploadButton onChange={ onUploadFileChange }/> }
+            { variant === 'update' ?
+              <div className="flex-content-between bg-light-gray padding-12">
+                <DownloadButton label={ pdf } urlToFile="#"/>
+                <Link linkTo="#" title="Replace file"/>
+              </div>
+              : <UploadButton onChange={ onUploadFileChange }/> }
             <H3 light small mb="0">Data Privacy URL</H3>
             <P variant="subtext" mt="0">https://www.lorem.ch/dataprivacy/</P>
             <P variant="blue">To change the URL go to general settings</P>
@@ -66,7 +73,7 @@ console.log(">>>FORM group >>",activeDate)
             <SubmitButton label="Save Data Privacy changes"/>
             <PrimaryLightButton label="Delete"/>
           </>
-         :
+          :
           <SubmitButton label="Create Data Privacy"/> }
         <Link linkTo="/privacy" title="Go back to Data Privacy"/>
       </div>
