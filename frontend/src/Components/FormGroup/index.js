@@ -1,5 +1,6 @@
 import MUIRichTextEditor from 'mui-rte';
 import { useFormik } from 'formik';
+import { makeStyles } from '@material-ui/core/styles';
 
 import TitleInput from './TitleInput';
 import UsersTypeSelect from './UsersTypeSelect';
@@ -14,8 +15,14 @@ import { getCurrentDateTime } from '../../Utils/helpers';
 import PrimaryLightButton from '../Button/PrimaryLight';
 import DownloadButton from '../Button/Download';
 
+const useStyles = makeStyles({
+  root: {
+    minHeight:'100px'
+  }
+});
 
 function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf, activeDate }) {
+  const classes = useStyles();
 
   const onUploadFileChange = (e) => {
     let files = e.target.files;
@@ -54,7 +61,7 @@ function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf, act
         inkBarStyle={{background: '#CF1F14!important'}}
         tabContent={ () =>
           <>
-            <MUIRichTextEditor label="Enter changes..."/>
+            <MUIRichTextEditor label="Enter changes..." className={classes.root}/>
             <H3 light small>PDF file with Data Privacy copy</H3>
             { variant === 'update' ?
               <div className="flex-content-between bg-light-gray padding-12">

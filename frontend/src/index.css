@@ -141,3 +141,7 @@ code {
 .bg-light-gray {
   background-color: #E5E5E5;
 }
+
+.MUIRichTextEditor-editor-19{
+  min-height: 100px!important;
+}
