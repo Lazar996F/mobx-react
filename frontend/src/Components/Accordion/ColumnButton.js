@@ -7,6 +7,7 @@ export const ColumnButton = styled.div`
   padding-top: 8px;
   max-height: 19px;
   padding-right: 13px;
+  align-items: center;
 `;
 
 export default ColumnButton;

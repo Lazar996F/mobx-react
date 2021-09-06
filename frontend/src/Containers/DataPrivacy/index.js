@@ -1,27 +1,16 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { observer } from 'mobx-react';
+import {Link} from 'react-router-dom';
 
-import AppContext, { SET_TITLE_SUBTITLE } from '../App/Context';
 import { fetchPolicies, fetchData } from '../../Utils/helpers';
 import Store from '../../Store';
 import ButtonWrapper from '../../Components/Layout/DataPrivacyButtonWrapper';
 import ButtonAddNew from '../../Components/Button/Primary';
 import DataPrivacyRow from './DataPrivacyRow';
+import PageHeader from '../../Components/PageHeader';
 
 
 const DataPrivacy = observer(() => {
-  const { dispatch } = useContext(AppContext);
-
-  useEffect(() => {
-    dispatch({
-      'type': SET_TITLE_SUBTITLE,
-      payload: {
-        title: 'Data Privacy',
-        subtitle: 'Active and archive Data Privacy records'
-      }
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   useEffect(() => {
     fetchData(fetchPolicies).then((data) => Store.setPolicies(data));
@@ -39,8 +28,11 @@ const DataPrivacy = observer(() => {
 
   return (
     <>
+      <PageHeader title="Data Privacy" subtitle="Active and archived Data Privacy records"/>
       <ButtonWrapper>
-        <ButtonAddNew linkTo="privacy/create" label="Add new Data Privacy"/>
+        <Link to="/privacy/create">
+          <ButtonAddNew linkTo="privacy/create" label="Add new Data Privacy"/>
+        </Link>
       </ButtonWrapper>
       <div className="padding-top-15">
         { DataPrivacyContent }

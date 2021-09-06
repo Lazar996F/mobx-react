@@ -11,9 +11,10 @@ import P from '../P';
 import Link from '../Link';
 import SubmitButton from '../Button/SubmitPrimary';
 import { getCurrentDateTime } from '../../Utils/helpers';
+import PrimaryLightButton from '../Button/PrimaryLight';
 
-function FormGroup({ title, areProfessionalUsers, areEndUsers, variant }) {
-
+function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf,activeDate }) {
+console.log(">>>FORM group >>",activeDate)
   const onUploadFileChange = (e) => {
     let files = e.target.files;
     let reader = new FileReader();
@@ -26,8 +27,9 @@ function FormGroup({ title, areProfessionalUsers, areEndUsers, variant }) {
       title: variant === 'update' ? title : '',
       areProfessionalUsers: variant === 'update' ? areProfessionalUsers : false,
       areEndUsers: variant === 'update' ? areEndUsers : false,
-      activeDate: getCurrentDateTime()
+      activeDate: activeDate || getCurrentDateTime()
     },
+    // Update or Save form data onSubmit
     onSubmit: values => {
       console.log(">>>Form data>>>>", values);
     }
@@ -60,10 +62,11 @@ function FormGroup({ title, areProfessionalUsers, areEndUsers, variant }) {
       />
       <div className="flex-content-between">
         { variant === 'update' ?
-          <div>
+          <>
             <SubmitButton label="Save Data Privacy changes"/>
-            <button>Delete</button>
-          </div> :
+            <PrimaryLightButton label="Delete"/>
+          </>
+         :
           <SubmitButton label="Create Data Privacy"/> }
         <Link linkTo="/privacy" title="Go back to Data Privacy"/>
       </div>

@@ -1,36 +1,30 @@
 import FormGroup from '../../Components/FormGroup';
-import { useContext, useEffect } from 'react';
-import AppContext, { SET_TITLE_SUBTITLE } from '../App/Context';
-import { getCurrentDateTime } from '../../Utils/helpers';
+import { checkAndReturnUserRole, getCurrentDateTime } from '../../Utils/helpers';
 import Wrapper from '../../Components/Layout/DataPrivacyFormWrapper';
+import PageHeader from '../../Components/PageHeader';
+import Store from '../../Store';
 
 function EditDataPrivacy() {
-  const { dispatch } = useContext(AppContext);
-
-  useEffect(() => {
-    dispatch({
-      type: SET_TITLE_SUBTITLE,
-      payload: {
-        title: 'Edit Data Privacy',
-        subtitle: 'Edit version of the Data Privacy'
-      }
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   const changedDate = getCurrentDateTime();
-  const title = `Data Privacy changes on the date ${ changedDate }`;
+  const documentTitle = `Data Privacy changes on the date ${ changedDate }`;
 
+  const usersRole = checkAndReturnUserRole(Store.policyForUpdate.role);
+console.log(">>>>EDIT >>>",Store.policyForUpdate.date)
   return (
-    <Wrapper>
+    <>
+      <PageHeader title="Edit Data Privacy" subtitle="Edit version of the Data Privacy"/>
+      <Wrapper>
       <FormGroup
         variant="update"
         chagedDate={ changedDate }
-        title={ title }
-        areProfessionalUsers={ true }
-        areEndUsers={ true }
+        title={ documentTitle }
+        areProfessionalUsers={ usersRole.areProfessionalUsers}
+        areEndUsers={ usersRole.areEndUsers }
+        pdf={Store.policyForUpdate.pdf}
+        activeDate={Store.policyForUpdate.date}
       />
     </Wrapper>
+      </>
   );
 }
 

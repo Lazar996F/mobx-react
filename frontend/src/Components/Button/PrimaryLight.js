@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 
-export const A = styled.a`
-  background-color: black;
+export const Button = styled.button`
+  background-color: #BFBFBF;
   display: inline-block;
   cursor: pointer;
   color: #ffff;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  width: 224px;
-  padding: 13px 0px;
+  width: 80px;
+  padding: 13px 0;
   text-decoration: none;
   border: 0;
   text-align: center;
 `;
 
-function Primary({ label }) {
-  return <A>{ label }</A>
+function PrimaryLight({ label }) {
+  return <Button>{ label }</Button>
 }
 
-export default Primary;
+export default PrimaryLight;

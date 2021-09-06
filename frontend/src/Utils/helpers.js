@@ -60,7 +60,6 @@ export async function fetchData(getData) {
   return await getData();
 }
 
-/*
 export const checkAndReturnUserRole = (role) => {
   switch(role) {
     case 'Professional Users':
@@ -85,6 +84,5 @@ export const checkAndReturnUserRole = (role) => {
       }
   }
 }
-*/
 
 

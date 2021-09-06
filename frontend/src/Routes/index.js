@@ -16,12 +16,12 @@ const routes = [
   },
   {
     path: '/privacy/create',
-    exact: false,
+    exact: true,
     component: AddNewDataPrivacy
   },
   {
     path: '/privacy/update',
-    exact: false,
+    exact: true,
     component: EditDataPrivacy
   }
 ]

@@ -1,19 +1,17 @@
 import styled from 'styled-components';
 
-export const A = styled.a`
+export const Button = styled.button`
   background-color: inherit;
   border: 1px solid #8080802e;
   color: #80808059;
   cursor: pointer;
   font-size: 0.8em;
-  line-height: 18px;
-  padding: 0 3px 0 3px;
   text-decoration: none;
 `;
 
-function Secondary({ label, linkTo, onClick }) {
+function Secondary({ label, onClick }) {
   return (
-    <A href={ linkTo } onClick={ onClick }>{ label }</A>
+    <Button onClick={ onClick }>{ label }</Button>
   );
 }
 
