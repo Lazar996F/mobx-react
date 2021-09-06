@@ -72,3 +72,5 @@ function FormGroup({ title, areProfessionalUsers, areEndUsers, variant }) {
 }
 
 export default FormGroup;
+
+

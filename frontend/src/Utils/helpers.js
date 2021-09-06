@@ -49,6 +49,18 @@ export const getCurrentDateTime = () => {
   return moment(now).format('YYYY-MM-DD[T]HH:mm:ss');
 }
 
+// fetch policies from an api
+export async function fetchPolicies() {
+  const req = await fetch('https://mocki.io/v1/a2b3edc6-689b-4e76-b713-26b07912068d')
+  return await req.json()
+}
+
+
+export async function fetchData(getData) {
+  return await getData();
+}
+
+/*
 export const checkAndReturnUserRole = (role) => {
   switch(role) {
     case 'Professional Users':
@@ -73,3 +85,6 @@ export const checkAndReturnUserRole = (role) => {
       }
   }
 }
+*/
+
+

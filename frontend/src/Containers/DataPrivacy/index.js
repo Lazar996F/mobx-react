@@ -1,10 +1,15 @@
 import { useContext, useEffect } from 'react';
+import { observer } from 'mobx-react';
 
 import AppContext, { SET_TITLE_SUBTITLE } from '../App/Context';
-import Content from './Content';
-import { DataPrivacyProvider } from './Context';
+import { fetchPolicies, fetchData } from '../../Utils/helpers';
+import Store from '../../Store';
+import ButtonWrapper from '../../Components/Layout/DataPrivacyButtonWrapper';
+import ButtonAddNew from '../../Components/Button/Primary';
+import DataPrivacyRow from './DataPrivacyRow';
 
-function DataPrivacy() {
+
+const DataPrivacy = observer(() => {
   const { dispatch } = useContext(AppContext);
 
   useEffect(() => {
@@ -18,11 +23,30 @@ function DataPrivacy() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    fetchData(fetchPolicies).then((data) => Store.setPolicies(data));
+  }, [])
+
+  const DataPrivacyContent = Store.policies.map((item, i) =>
+    <DataPrivacyRow
+      key={ i }
+      role={ item.role }
+      date={ item.date }
+      pdf={ item.pdf }
+      textContent={ item.content }
+      state={ item.state }
+      notShowLine={ i === (Store.policies.length - 1) }/>)
+
   return (
-    <DataPrivacyProvider>
-      <Content/>
-    </DataPrivacyProvider>
+    <>
+      <ButtonWrapper>
+        <ButtonAddNew linkTo="privacy/create" label="Add new Data Privacy"/>
+      </ButtonWrapper>
+      <div className="padding-top-15">
+        { DataPrivacyContent }
+      </div>
+    </>
   );
-}
+})
 
 export default DataPrivacy;

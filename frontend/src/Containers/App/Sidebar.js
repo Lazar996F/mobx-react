@@ -9,7 +9,6 @@ import {linkItems} from '../../Utils/helpers';
 
 function SidebarContent() {
   const { state } = useContext(Context);
-
   return (
     <Wrapper>
       <Logo/>

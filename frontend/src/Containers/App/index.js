@@ -1,3 +1,4 @@
+import React from 'react';
 import routes from '../../Routes';
 import {
   BrowserRouter,
@@ -13,8 +14,7 @@ import { AppProvider } from './Context';
 import TopMenu from '../../Components/TopMenu';
 import Footer from '../../Components/Footer';
 
-function App() {
-
+const App = () => {
   return (
     <AppProvider>
       <Wrapper>
