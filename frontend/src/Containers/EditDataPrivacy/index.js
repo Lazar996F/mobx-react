@@ -1,5 +1,4 @@
 import moment from 'moment';
-
 import FormGroup from '../../Components/FormGroup';
 import { checkAndReturnUserRole, getCurrentDateTime } from '../../Utils/helpers';
 import Wrapper from '../../Components/Layout/DataPrivacyFormWrapper';
