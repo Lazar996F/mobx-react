@@ -32,9 +32,9 @@ const App = () => {
                   />
                 </Switch>))
               }
-              <Route path="/">
-                <Redirect to="/privacy"/>
-              </Route>
+            <Route path="/">
+              <Redirect to="/privacy"/>
+            </Route>
           </ContentBox>
         </BrowserRouter>
       </Wrapper>

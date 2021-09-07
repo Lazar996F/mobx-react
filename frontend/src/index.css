@@ -118,30 +118,10 @@ code {
   margin-bottom: 15px;
 }
 
-.MUIRichTextEditor-editor-18 {
-  min-height: 100px;
-}
-
-.MUIRichTextEditor-editorContainer-19 {
-  min-height: 100px;
-}
-
-.MUIRichTextEditor-editorContainer-42 .MUIRichTextEditor-placeHolder-46 {
-  min-height: 100px;
-}
-
-.MUIRichTextEditor-editorContainer-24 .MUIRichTextEditor-placeHolder-28 {
-  min-height: 100px;
-}
-
 .padding-12 {
   padding: 12px;
 }
 
 .bg-light-gray {
   background-color: #E5E5E5;
-}
-
-.MUIRichTextEditor-editor-19{
-  min-height: 100px!important;
 }

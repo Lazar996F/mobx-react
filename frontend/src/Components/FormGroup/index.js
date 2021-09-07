@@ -1,6 +1,5 @@
 import MUIRichTextEditor from 'mui-rte';
 import { useFormik } from 'formik';
-import { makeStyles } from '@material-ui/core/styles';
 
 import TitleInput from './TitleInput';
 import UsersTypeSelect from './UsersTypeSelect';
@@ -15,14 +14,7 @@ import { getCurrentDateTime } from '../../Utils/helpers';
 import PrimaryLightButton from '../Button/PrimaryLight';
 import DownloadButton from '../Button/Download';
 
-const useStyles = makeStyles({
-  root: {
-    minHeight:'100px'
-  }
-});
-
-function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf, activeDate }) {
-  const classes = useStyles();
+function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf }) {
 
   const onUploadFileChange = (e) => {
     let files = e.target.files;
@@ -36,7 +28,7 @@ function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf, act
       title: variant === 'update' ? title : '',
       areProfessionalUsers: variant === 'update' ? areProfessionalUsers : false,
       areEndUsers: variant === 'update' ? areEndUsers : false,
-      activeDate: activeDate || getCurrentDateTime()
+      activeDate: getCurrentDateTime()
     },
     // Update or Save form data onSubmit
     onSubmit: values => {
@@ -58,15 +50,15 @@ function FormGroup({ title, areProfessionalUsers, areEndUsers, variant, pdf, act
       </div>
       <Tabs
         stylestate="create-privacy"
-        inkBarStyle={{background: '#CF1F14!important'}}
+        inkBarStyle={ { background: '#CF1F14!important' } }
         tabContent={ () =>
           <>
-            <MUIRichTextEditor label="Enter changes..." className={classes.root}/>
+            <MUIRichTextEditor label="Enter changes..."/>
             <H3 light small>PDF file with Data Privacy copy</H3>
             { variant === 'update' ?
               <div className="flex-content-between bg-light-gray padding-12">
                 <DownloadButton label={ pdf } urlToFile="#"/>
-                <UploadButton onChange={onUploadFileChange} variant="replace"/>
+                <UploadButton onChange={ onUploadFileChange } variant="replace"/>
               </div>
               : <UploadButton onChange={ onUploadFileChange }/> }
             <H3 light small mb="0">Data Privacy URL</H3>

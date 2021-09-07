@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 import FormGroup from '../../Components/FormGroup';
 import { checkAndReturnUserRole, getCurrentDateTime } from '../../Utils/helpers';
 import Wrapper from '../../Components/Layout/DataPrivacyFormWrapper';
@@ -5,11 +7,10 @@ import PageHeader from '../../Components/PageHeader';
 import Store from '../../Store';
 
 function EditDataPrivacy() {
-  const changedDate = getCurrentDateTime();
+  const changedDate = moment(getCurrentDateTime()).format("YYYY.MM.DD")
   const documentTitle = `Data Privacy changes on the date ${ changedDate }`;
 
   const usersRole = checkAndReturnUserRole(Store.policyForUpdate.role);
-  console.log(">>>>EDIT >>>", Store.policyForUpdate.date);
 
   return (
     <>
@@ -22,7 +23,6 @@ function EditDataPrivacy() {
           areProfessionalUsers={ usersRole.areProfessionalUsers }
           areEndUsers={ usersRole.areEndUsers }
           pdf={ Store.policyForUpdate.pdf }
-          activeDate={ Store.policyForUpdate.date }
         />
       </Wrapper>
     </>

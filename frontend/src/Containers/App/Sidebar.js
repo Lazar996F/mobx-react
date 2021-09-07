@@ -5,13 +5,44 @@ import { Wrapper } from '../../Components/Sidebar/Wrapper';
 import Context from './Context';
 import UserInfoBar from '../../Components/UserInfoBar';
 import NavigationWrapper from '../../Components/Layout/NavigationWrapper';
-import {linkItems} from '../../Utils/helpers';
+import { Link } from 'react-router-dom';
+
+ const linkItems = [
+  {
+    title: "Dashboard",
+    to: '/dashboard'
+  },
+  {
+    title: "Companies",
+    to: '/companies'
+  },
+  {
+    title: "Branches",
+    to: '/branches'
+  },
+  {
+    title: "Users",
+    to: '/users'
+  },
+  {
+    title: "Terms of Service",
+    to: '/service'
+  },
+  {
+    title: "Data Privacy",
+    to: '/privacy'
+  },
+  {
+    title: "General settings",
+    to: '/settings'
+  }
+]
 
 function SidebarContent() {
   const { state } = useContext(Context);
   return (
     <Wrapper>
-      <Logo/>
+      <Link to="/privacy"><Logo/></Link>
       <NavigationWrapper>
         { linkItems.map(item =>
           <NavLink

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { observer } from 'mobx-react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { fetchPolicies, fetchData } from '../../Utils/helpers';
 import Store from '../../Store';

@@ -1,36 +1,5 @@
 import moment from 'moment';
 
-export const linkItems = [
-  {
-    title: "Dashboard",
-    to: '/dashboard'
-  },
-  {
-    title: "Companies",
-    to: '/companies'
-  },
-  {
-    title: "Branches",
-    to: '/branches'
-  },
-  {
-    title: "Users",
-    to: '/users'
-  },
-  {
-    title: "Terms of Service",
-    to: '/service'
-  },
-  {
-    title: "Data Privacy",
-    to: '/privacy'
-  },
-  {
-    title: "General settings",
-    to: '/settings'
-  }
-]
-
 export const getInitials = (name) => {
   let initials = name.split(' ');
 
@@ -61,7 +30,7 @@ export async function fetchData(getData) {
 }
 
 export const checkAndReturnUserRole = (role) => {
-  switch(role) {
+  switch (role) {
     case 'Professional Users':
       return {
         areProfessionalUsers: true,

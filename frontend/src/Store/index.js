@@ -1,9 +1,8 @@
 import { makeAutoObservable } from 'mobx';
-import axios from 'axios';
 
 class Store {
   policies = []
-  error=false
+  error = false
   policyForUpdate = {
     role: '',
     pdf: '',
@@ -13,12 +12,12 @@ class Store {
   constructor() {
     makeAutoObservable(this);
   }
-  
+
   setPolicies = (policies) => {
     this.policies = policies
   }
 
-   setError = (err) => {
+  setError = (err) => {
     this.error = Boolean(err)
   }
 
