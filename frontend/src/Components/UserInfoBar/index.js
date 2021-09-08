@@ -5,7 +5,6 @@ import {getInitials} from '../../Utils/helpers';
 
 const Wrapper = styled.div`
   margin-top: auto;
-  padding-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

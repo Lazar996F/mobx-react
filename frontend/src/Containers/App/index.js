@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import routes from '../../Routes';
 import {
   BrowserRouter,
@@ -13,10 +13,18 @@ import { Wrapper } from '../../Components/Layout/Wrapper';
 import { AppProvider } from './Context';
 import TopMenu from '../../Components/TopMenu';
 import Footer from '../../Components/Footer';
+import CookiesAcceptation from '../CookiesAcceptation';
+
 
 const App = () => {
+  useEffect(() => {
+    if(localStorage.getItem('cookiesAccepted')==='false')
+      localStorage.setItem('cookiesAccepted','true');
+  },[])
+
   return (
     <AppProvider>
+      <CookiesAcceptation/>
       <Wrapper>
         <BrowserRouter>
           <Sidebar/>

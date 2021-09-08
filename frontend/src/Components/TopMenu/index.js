@@ -18,7 +18,7 @@ function TopMenu({ label }) {
 
   return (
     <Wrapper>
-      <H3>{ label }</H3>
+      <H3 className="mb-0">{ label }</H3>
       <div ref={wrapperRef}>
       <Button onClick={ onClick }/>
       { open && <MenuContent menuButtonsLabels={ state?.menuButtonsLabels }/> }

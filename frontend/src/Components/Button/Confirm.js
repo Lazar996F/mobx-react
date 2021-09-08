@@ -6,7 +6,6 @@ export default styled(Button)`
   font-size: 16px;
   line-height: 24px;
   border-radius: 0;
-  margin-top: 30px;
   border: 1px solid #000;
   width: 100%;
   background-color: black;

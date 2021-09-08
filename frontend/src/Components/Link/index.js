@@ -6,9 +6,18 @@ const A = styled.a`
   font-weight: 700;
 `;
 
-function Link({ title, linkTo }) {
+const Button = styled.button`
+  color: #1081FC;
+  font-weight: 700;
+  border:0;
+  background-color: inherit;
+`;
+
+function Link({ title, linkTo, onClick }) {
   return (
-    <A href={ linkTo }>{ title }</A>
+   <>
+     {linkTo ? <A href={ linkTo }>{ title }</A> : <Button onClick={onClick}>{title}</Button> }
+   </>
   );
 }
 
