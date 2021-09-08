@@ -10,7 +10,7 @@ class DataProtectionOverviewModal extends Component {
     const { isOpen, toggle } = this.props;
     return (
       <>
-        <StyledModal size='lg' centered isOpen={ isOpen } fade={ false } toggle={ toggle }>
+        <StyledModal size='lg' centered isOpen={ isOpen } fade={ false } toggle={ toggle } backdrop="static">
           <StyledBody>
             <h3 className="text-center mb-4">Data protection overview</h3>
             <p className="text-center mb-5 text-bold-600">
