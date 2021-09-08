@@ -125,3 +125,11 @@ code {
 .bg-light-gray {
   background-color: #E5E5E5;
 }
+
+.text-bold-600 {
+  font-weight: 600;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}

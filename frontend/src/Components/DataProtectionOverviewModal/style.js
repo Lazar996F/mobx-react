@@ -1,47 +1,20 @@
 import styled from 'styled-components'
+import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 
-import { Modal, ModalBody, ModalHeader } from 'reactstrap';
 
-export const StyledModalBody = styled(ModalBody)`
-  padding: 32px;
-  font-size: 16px;
-  line-height: 24px;
-  align-items: center;
-  text-align: center;
+export const StyledFooter = styled(ModalFooter)`
+  justify-content: flex-start;
+  border-top: 0;
+`;
 
-  h3 {
-    font-size: 18px;
-    line-height: 28px;
+export const StyledBody = styled(ModalBody)`
+  padding: 3em;
+`;
+
+export default styled(Modal)`
+  max-width: 600px;
+  .modal-content {
+    border: 0;
+    border-radius: 0;
   }
-
-  h1 {
-    font-size: 32px;
-    line-height: 44px;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 70px;
-  }
-
-  @media (min-width: 768px) {
-    p {
-      max-width: 70%;
-      margin: auto;
-    }
-  }
-
-  .button-row {
-    flex-direction: row-reverse;
-  }
-`
-export const StyledModalHeader = styled(ModalHeader)`
-  border: none;
-
-  svg {
-    cursor: pointer;
-  }
-`
-
-export default styled(Modal)``
+`;

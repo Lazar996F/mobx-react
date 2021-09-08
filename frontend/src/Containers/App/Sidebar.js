@@ -34,7 +34,7 @@ import { Link } from 'react-router-dom';
   },
   {
     title: "General settings",
-    to: '/settings'
+    to: '/general-settings'
   }
 ]
 

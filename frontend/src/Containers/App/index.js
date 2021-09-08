@@ -22,16 +22,15 @@ const App = () => {
           <Sidebar/>
           <ContentBox>
             <TopMenu label="Lorem Management Portal - Super Admin"/>
+            <Switch>
             { routes.map((route, key) => (
-              <Switch>
                 <Route
                   key={ key }
                   path={ route.path }
                   component={ route.component }
                   exact={ route.exact }
-                />
-              </Switch>))
-            }
+                />))}
+            </Switch>
             <Route path="/">
               <Redirect to="/privacy"/>
             </Route>

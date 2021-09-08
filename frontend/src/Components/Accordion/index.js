@@ -1,6 +1,6 @@
 import AccordionWrapper from './AccordionWrapper';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
-import ArrowDownIcon from '../ArrowDown';
+import ArrowDownIcon from '../Arrow/Down';
 import AccordionMUI from '@material-ui/core/Accordion';
 import { makeStyles } from '@material-ui/core/styles';
 
