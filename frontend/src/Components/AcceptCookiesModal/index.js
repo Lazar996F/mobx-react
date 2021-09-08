@@ -6,10 +6,10 @@ import Link from '../Link';
 
 class AcceptCookiesModal extends Component {
   render() {
-      const { isOpen, toggle, onMoreChoicesClick } = this.props;
+      const { isOpen, onCookiesAccepted, onMoreChoicesClick } = this.props;
       return (
       <>
-        <StyledModal size='lg' centered isOpen={ isOpen } fade={ false } toggle={ toggle } backdrop="static">
+        <StyledModal size='lg' centered isOpen={ isOpen } fade={ false } backdrop="static">
           <StyledBody>
             <h3 className="text-center mb-4">This website uses cookies</h3>
             <p className="text-center mb-5 text-bold-600">
@@ -19,7 +19,7 @@ class AcceptCookiesModal extends Component {
             </p>
           </StyledBody>
           <StyledFooter>
-            <ConfirmButton onClick={ toggle }>Accept All</ConfirmButton>
+            <ConfirmButton onClick={ onCookiesAccepted }>Accept All</ConfirmButton>
               <Link title="More Choices" onClick={onMoreChoicesClick}/>
           </StyledFooter>
         </StyledModal>

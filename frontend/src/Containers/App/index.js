@@ -17,11 +17,6 @@ import CookiesAcceptation from '../CookiesAcceptation';
 
 
 const App = () => {
-  useEffect(() => {
-    if(localStorage.getItem('cookiesAccepted')==='false')
-      localStorage.setItem('cookiesAccepted','true');
-  },[])
-
   return (
     <AppProvider>
       <CookiesAcceptation/>

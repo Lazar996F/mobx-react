@@ -5,12 +5,23 @@ import BoxWithCollapse from './BoxWithCollapse';
 import StyledModal, { StyledFooter, StyledBody } from './style';
 
 class DataProtectionOverviewModal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      functionalActivated: false
+    };
+  }
 
   render() {
-    const { isOpen, toggle } = this.props;
+    const { isOpen, onConfirmPreferences } = this.props;
+    const onFunctionalActiveChange = (activated) => {
+      this.setState({functionalActivated: activated});
+
+    }
+
     return (
       <>
-        <StyledModal size='lg' centered isOpen={ isOpen } fade={ false } toggle={ toggle } backdrop="static">
+        <StyledModal size='lg' centered isOpen={ isOpen } fade={ false } backdrop="static">
           <StyledBody>
             <h3 className="text-center mb-4">Data protection overview</h3>
             <p className="text-center mb-5 text-bold-600">
@@ -25,10 +36,10 @@ class DataProtectionOverviewModal extends Component {
                 basic functionality and security features of the website.
               </p>
             </BoxWithCollapse>
-            <BoxWithCollapse title="Functional" active="manual"/>
+            <BoxWithCollapse title="Functional" active="manual" onFunctionalActiveChange={onFunctionalActiveChange}/>
           </StyledBody>
           <StyledFooter>
-            <ConfirmButton onClick={ toggle }>Submit Preferences</ConfirmButton>
+            <ConfirmButton onClick={ () => onConfirmPreferences(this.state.functionalActivated) }>Submit Preferences</ConfirmButton>
           </StyledFooter>
         </StyledModal>
       </>

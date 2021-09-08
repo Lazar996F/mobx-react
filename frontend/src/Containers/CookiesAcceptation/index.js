@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import DataProtectionOverviewModal from '../../Components/DataProtectionOverviewModal';
 import AcceptCookiesModal from '../../Components/AcceptCookiesModal';
 
@@ -12,7 +13,7 @@ function CookiesAcceptation() {
   const [ isOpenCookies, setOpenCookies ] = useState(false);
   const [ isOpenProtection, setOpenProtection ] = useState(false);
 
-  const toggleCookiesModal = () => {
+  const onCookiesAccepted = () => {
     localStorage.setItem('cookiesAccepted', 'true');
     setOpenCookies(!isOpenCookies);
   }
@@ -22,20 +23,21 @@ function CookiesAcceptation() {
     setOpenProtection(true);
   }
 
-  const toggleProtectionModal = () => {
+  const onConfirmPreferences = (functionalActivated) => {
     setOpenProtection(!isOpenProtection);
     setOpenCookies(true);
+    console.log(">> Did functional cookies activated ? :>",functionalActivated)
   }
 
   return (
     <>
       <DataProtectionOverviewModal
         isOpen={ isOpenProtection }
-        toggle={ toggleProtectionModal }
+        onConfirmPreferences={ onConfirmPreferences }
       />
       <AcceptCookiesModal
         isOpen={ isOpenCookies }
-        toggle={ toggleCookiesModal }
+        onCookiesAccepted={ onCookiesAccepted }
         onMoreChoicesClick={ onMoreChoicesClick }
       />
     </>

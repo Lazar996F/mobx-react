@@ -11,13 +11,9 @@ class BoxWithCollapse extends Component {
 
   render() {
     const { isOpen } = this.state
-    const { active, title, children } = this.props
+    const { active, title, children, onFunctionalActiveChange } = this.props
 
     const toggle = () => this.setState({ isOpen: !isOpen })
-
-    const onActivateChange = (activated) => {
-      console.log(">>>Did Functional cookies active? >", activated)
-    }
 
     return (
       <>
@@ -27,7 +23,7 @@ class BoxWithCollapse extends Component {
             <h3>{ title }</h3>
           </div>
           { active === 'always' ? <p className="text-bold-600 mb-0">always active</p> :
-            <SwitchButton onActivateChange={ onActivateChange }/> }
+            <SwitchButton onActivateChange={ onFunctionalActiveChange }/> }
         </Box>
         { (children || active === 'always') && <Collapse isOpen={ isOpen }>{ children }</Collapse> }
       </>
