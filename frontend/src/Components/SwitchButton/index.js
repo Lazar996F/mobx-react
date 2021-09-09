@@ -12,6 +12,10 @@ class SwitchButton extends Component {
     this.setState({ checked });
   }
 
+  componentDidMount() {
+    this.setState({ checked: this.props.preferencesConfirmed });
+  }
+
   render() {
     const isActive = this.state.checked ? 'Activated' : 'Deactivated';
 

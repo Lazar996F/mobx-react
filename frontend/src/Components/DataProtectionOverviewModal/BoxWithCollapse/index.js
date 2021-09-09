@@ -11,7 +11,7 @@ class BoxWithCollapse extends Component {
 
   render() {
     const { isOpen } = this.state
-    const { active, title, children, onFunctionalActiveChange } = this.props
+    const { active, title, children, onFunctionalActiveChange, preferencesConfirmed } = this.props
 
     const toggle = () => this.setState({ isOpen: !isOpen })
 
@@ -23,7 +23,8 @@ class BoxWithCollapse extends Component {
             <h3>{ title }</h3>
           </div>
           { active === 'always' ? <p className="text-bold-600 mb-0">always active</p> :
-            <SwitchButton onActivateChange={ onFunctionalActiveChange }/> }
+            <SwitchButton preferencesConfirmed={ preferencesConfirmed }
+                          onActivateChange={ onFunctionalActiveChange }/> }
         </Box>
         { (children || active === 'always') && <Collapse isOpen={ isOpen }>{ children }</Collapse> }
       </>

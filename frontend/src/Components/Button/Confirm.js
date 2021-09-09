@@ -9,6 +9,7 @@ export default styled(Button)`
   border: 1px solid #000;
   width: 100%;
   background-color: black;
+
   :disabled {
     background-color: #ffffff;
   }

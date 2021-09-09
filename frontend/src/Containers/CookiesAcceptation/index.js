@@ -12,6 +12,7 @@ function CookiesAcceptation() {
 
   const [ isOpenCookies, setOpenCookies ] = useState(false);
   const [ isOpenProtection, setOpenProtection ] = useState(false);
+  const [preferencesConfirmed, setPreferencesConfirmed] = useState(false);
 
   const onCookiesAccepted = () => {
     localStorage.setItem('cookiesAccepted', 'true');
@@ -26,7 +27,7 @@ function CookiesAcceptation() {
   const onConfirmPreferences = (functionalActivated) => {
     setOpenProtection(!isOpenProtection);
     setOpenCookies(true);
-    console.log(">> Did functional cookies activated ? :>",functionalActivated)
+    setPreferencesConfirmed(functionalActivated);
   }
 
   return (
@@ -34,6 +35,7 @@ function CookiesAcceptation() {
       <DataProtectionOverviewModal
         isOpen={ isOpenProtection }
         onConfirmPreferences={ onConfirmPreferences }
+        preferencesConfirmed={preferencesConfirmed}
       />
       <AcceptCookiesModal
         isOpen={ isOpenCookies }

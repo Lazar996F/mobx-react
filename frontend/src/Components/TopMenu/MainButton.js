@@ -9,10 +9,10 @@ export const WrapperButton = styled.button`
   }
   width: 32px;
   height: 32px;
-  padding: 0;
   cursor: pointer;
   margin-bottom: -2px;
   margin-left: 10px;
+  padding-bottom: 5px;
 `;
 
 function MainButton({onClick}) {

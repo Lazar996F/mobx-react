@@ -16,7 +16,7 @@ const routes = [
   },
   {
     path: '/privacy/create',
-    exact: true,
+    exact: false,
     component: AddNewDataPrivacy
   },
   {

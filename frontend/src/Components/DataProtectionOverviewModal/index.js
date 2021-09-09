@@ -13,9 +13,9 @@ class DataProtectionOverviewModal extends Component {
   }
 
   render() {
-    const { isOpen, onConfirmPreferences } = this.props;
+    const { isOpen, onConfirmPreferences, preferencesConfirmed } = this.props;
     const onFunctionalActiveChange = (activated) => {
-      this.setState({functionalActivated: activated});
+      this.setState({ functionalActivated: activated });
 
     }
 
@@ -36,10 +36,12 @@ class DataProtectionOverviewModal extends Component {
                 basic functionality and security features of the website.
               </p>
             </BoxWithCollapse>
-            <BoxWithCollapse title="Functional" active="manual" onFunctionalActiveChange={onFunctionalActiveChange}/>
+            <BoxWithCollapse title="Functional" active="manual" preferencesConfirmed={ preferencesConfirmed }
+                             onFunctionalActiveChange={ onFunctionalActiveChange }/>
           </StyledBody>
           <StyledFooter>
-            <ConfirmButton onClick={ () => onConfirmPreferences(this.state.functionalActivated) }>Submit Preferences</ConfirmButton>
+            <ConfirmButton onClick={ () => onConfirmPreferences(this.state.functionalActivated) }>Submit
+              Preferences</ConfirmButton>
           </StyledFooter>
         </StyledModal>
       </>

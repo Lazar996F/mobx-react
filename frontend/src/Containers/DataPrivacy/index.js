@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { Link } from 'react-router-dom';
 
 import { fetchPolicies, fetchData } from '../../Utils/helpers';
 import Store from '../../Store';
@@ -30,9 +29,7 @@ const DataPrivacy = observer(() => {
     <>
       <PageHeader title="Data Privacy" subtitle="Active and archived Data Privacy records"/>
       <ButtonWrapper>
-        <Link to="/privacy/create">
-          <ButtonAddNew linkTo="privacy/create" label="Add new Data Privacy"/>
-        </Link>
+        <ButtonAddNew linkTo="/privacy/create" label="Add new Data Privacy"/>
       </ButtonWrapper>
       <div className="padding-top-15">
         { DataPrivacyContent }
