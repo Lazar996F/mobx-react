@@ -25,26 +25,27 @@ function DataPrivacyRow({ notShowLine, role, date, pdf, textContent, state }) {
     </div>
   )
 
-const onChangeButtonClick = ({role,date,pdf}) => {
-    Store.setPolicyForUpdate({role,date,pdf});
-}
+  const onChangeButtonClick = ({ role, date, pdf }) => {
+    Store.setPolicyForUpdate({ role, date, pdf });
+  }
 
   return (
-      <RowWrapper>
-        <CircleWithVerticalLine notShowLine={ notShowLine } state={ state }/>
-        <Accordion expandedContent={ () => ExpandedContent({ tabContent, pdf, date }) }>
-          <ActiveInfoColumn>
-            <H3 className="mb-0">Active from { date }</H3>
-            <TimelineChip state={ state }/>
-          </ActiveInfoColumn>
-          <RoleColumn>
-            <UserRoleView role={ role }/>
-          </RoleColumn>
-          <ColumnButton>
-            { state === 'draft' && <Link to="/privacy/update" onClick={() => onChangeButtonClick({role,date,pdf})}><Button label="Change"/></Link> }
-          </ColumnButton>
-        </Accordion>
-      </RowWrapper>
+    <RowWrapper>
+      <CircleWithVerticalLine notShowLine={ notShowLine } state={ state }/>
+      <Accordion expandedContent={ () => ExpandedContent({ tabContent, pdf, date }) }>
+        <ActiveInfoColumn>
+          <H3 className="mb-0">Active from { date }</H3>
+          <TimelineChip state={ state }/>
+        </ActiveInfoColumn>
+        <RoleColumn>
+          <UserRoleView role={ role }/>
+        </RoleColumn>
+        <ColumnButton>
+          { state === 'draft' &&
+          <Link to="/privacy/update" onClick={ () => onChangeButtonClick({ role, date, pdf }) }><Button label="Change"/></Link> }
+        </ColumnButton>
+      </Accordion>
+    </RowWrapper>
   );
 }
 

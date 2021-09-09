@@ -11,7 +11,8 @@ const useStylesBootstrap = makeStyles((theme) => ({
     fontSize: '12px',
     textAlign: 'center',
     border: '0',
-    font: 'normal normal normal 12px/20px Circular Std'
+    font: 'normal normal normal 12px/20px Circular Std',
+    lineHeight: '10px'
   },
 }));
 
