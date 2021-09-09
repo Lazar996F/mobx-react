@@ -5,6 +5,7 @@ const ActiveInfoColumn = styled.div`
   flex-grow:1;
   width: 33%;
   max-width: 380px;
+  align-items: center;
 `;
 
 export default ActiveInfoColumn;

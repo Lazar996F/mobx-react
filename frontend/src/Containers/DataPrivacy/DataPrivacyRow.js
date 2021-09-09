@@ -34,7 +34,7 @@ const onChangeButtonClick = ({role,date,pdf}) => {
         <CircleWithVerticalLine notShowLine={ notShowLine } state={ state }/>
         <Accordion expandedContent={ () => ExpandedContent({ tabContent, pdf, date }) }>
           <ActiveInfoColumn>
-            <H3>Active from { date }</H3>
+            <H3 className="mb-0">Active from { date }</H3>
             <TimelineChip state={ state }/>
           </ActiveInfoColumn>
           <RoleColumn>
