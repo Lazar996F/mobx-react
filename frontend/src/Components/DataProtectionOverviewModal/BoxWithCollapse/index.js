@@ -23,7 +23,7 @@ class BoxWithCollapse extends Component {
       <>
         <Box onClick={ toggle } cursorPointer={ active === 'always' }>
           <div className="d-flex">
-            <ArrowRight rotate={this.state.rotate} />
+            <ArrowRight rotate={this.state.rotate} active={active}/>
             <h3>{ title }</h3>
           </div>
           { active === 'always' ? <p className="text-bold-600 mb-0">always active</p> :
