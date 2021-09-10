@@ -21,7 +21,7 @@ const LogoLabel = styled.span`
   margin-top: 8px;
 `;
 
-function Disposuite({ title, src }) {
+function IconButton({ title, src }) {
   return (
     <Wrapper>
       <img src={ process.env.PUBLIC_URL + src } alt={ src }/>
@@ -30,4 +30,4 @@ function Disposuite({ title, src }) {
   );
 }
 
-export default Disposuite;
+export default IconButton;

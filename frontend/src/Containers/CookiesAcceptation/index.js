@@ -3,16 +3,15 @@ import React, { useState, useEffect } from 'react';
 import DataProtectionOverviewModal from '../../Components/DataProtectionOverviewModal';
 import AcceptCookiesModal from '../../Components/AcceptCookiesModal';
 
-
 function CookiesAcceptation() {
+  const [ isOpenCookies, setOpenCookies ] = useState(false);
+  const [ isOpenProtection, setOpenProtection ] = useState(false);
+  const [preferencesConfirmed, setPreferencesConfirmed] = useState(false);
+
   useEffect(() => {
     if (localStorage.getItem('cookiesAccepted') === 'true') setOpenCookies(false)
     else setOpenCookies(true);
   }, []);
-
-  const [ isOpenCookies, setOpenCookies ] = useState(false);
-  const [ isOpenProtection, setOpenProtection ] = useState(false);
-  const [preferencesConfirmed, setPreferencesConfirmed] = useState(false);
 
   const onCookiesAccepted = () => {
     localStorage.setItem('cookiesAccepted', 'true');
