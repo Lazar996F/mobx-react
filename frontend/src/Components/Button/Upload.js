@@ -12,7 +12,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
   },
   label: {
-    margin: 0
+    margin: 0,
+    width: '100%',
+    marginBottom: '10px'
   },
   button: {
     color: '#1081FC!important'

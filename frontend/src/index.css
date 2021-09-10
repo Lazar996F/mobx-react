@@ -111,6 +111,7 @@ code {
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  max-height: 45px;
 }
 
 .sc-dQoVA {
@@ -132,4 +133,8 @@ code {
 
 .mr-15 {
   margin-right: 15px;
+}
+
+.MUIRichTextEditor-editor-23 {
+  min-height: 100px;
 }
